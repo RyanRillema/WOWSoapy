@@ -1,0 +1,17 @@
+c:\users\ryanr\source\repos\WOWSoapy\WOWSoapy\bin\Debug\WOWSoapy.exe.config
+c:\users\ryanr\source\repos\WOWSoapy\WOWSoapy\bin\Debug\WOWSoapy.exe
+c:\users\ryanr\source\repos\WOWSoapy\WOWSoapy\bin\Debug\WOWSoapy.pdb
+c:\users\ryanr\source\repos\WOWSoapy\WOWSoapy\bin\Debug\WOWSoapy.xml
+c:\users\ryanr\source\repos\WOWSoapy\WOWSoapy\bin\Debug\Newtonsoft.Json.dll
+c:\users\ryanr\source\repos\WOWSoapy\WOWSoapy\bin\Debug\Newtonsoft.Json.xml
+c:\users\ryanr\source\repos\WOWSoapy\WOWSoapy\obj\Debug\WOWSoapy.vbprojAssemblyReference.cache
+c:\users\ryanr\source\repos\WOWSoapy\WOWSoapy\obj\Debug\WOWSoapy.Resources.resources
+c:\users\ryanr\source\repos\WOWSoapy\WOWSoapy\obj\Debug\WOWSoapy.WOWSoapy.resources
+c:\users\ryanr\source\repos\WOWSoapy\WOWSoapy\obj\Debug\WOWSoapy.vbproj.GenerateResource.cache
+c:\users\ryanr\source\repos\WOWSoapy\WOWSoapy\obj\Debug\WOWSoapy.vbproj.CoreCompileInputs.cache
+c:\users\ryanr\source\repos\WOWSoapy\WOWSoapy\obj\Debug\WOWSoapy.vbproj.CopyComplete
+c:\users\ryanr\source\repos\WOWSoapy\WOWSoapy\obj\Debug\WOWSoapy.exe
+c:\users\ryanr\source\repos\WOWSoapy\WOWSoapy\obj\Debug\WOWSoapy.xml
+c:\users\ryanr\source\repos\WOWSoapy\WOWSoapy\obj\Debug\WOWSoapy.pdb
+C:\Users\ryanr\source\repos\WOWSoapy\WOWSoapy\obj\Debug\WOWSoapy.OverView.resources
+C:\Users\ryanr\source\repos\WOWSoapy\WOWSoapy\obj\Debug\WOWSoapy.Details.resources
