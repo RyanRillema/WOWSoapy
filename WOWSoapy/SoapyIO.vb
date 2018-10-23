@@ -335,6 +335,9 @@ Public Class SoapyIO
         TestData(Count, 1) = "shroomhunter"
         TestData(Count, 2) = Light
         Count += 1
+        TestData(Count, 1) = "beardsly"
+        TestData(Count, 2) = Light
+        Count += 1
         TestData(Count, 1) = "ragmor"
         TestData(Count, 2) = Light
         Count += 1
