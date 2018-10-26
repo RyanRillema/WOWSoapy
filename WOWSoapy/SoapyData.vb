@@ -15,7 +15,7 @@
     Public Sub New(SetFrmWowSoapy As WOWSoapy)
         FrmWowSoapy = SetFrmWowSoapy
         FrmOverview = New OverView
-        FrmDetails = New Details
+        FrmDetails = New Details(Me)
         FrmOverview.HideForm()
         SoapyIO = New SoapyIO(Me)
         SoapyConst = New SoapyConst

@@ -72,6 +72,6 @@
     End Sub
 
     Private Sub cmdDetails_Click(sender As Object, e As EventArgs) Handles cmdDetails.Click
-        SoapyData.FrmDetails.ShowForm()
+        SoapyData.FrmDetails.ShowForm(1)
     End Sub
 End Class
