@@ -43,6 +43,9 @@ Public Class CharDetails
 
     <JsonProperty("totalHonorableKills")>
     Public Property TotalHonorableKills As Integer
+
+    Public Property BagNotes As String
+
     Public Function getPrimaryProfession(CharDetail As CharDetails, Level As String, Prof As String) As Primary
         Dim ReturnProfession As Primary = New Primary
         Dim bLoop As Boolean = True

@@ -36,6 +36,7 @@ Public Class SoapyIO
             If TestData(iLoop, 1) <> "" Then
 
                 If GetCharData(SoapyData.Chars(iCharCount), TestData(iLoop, 1), TestData(iLoop, 2)) Then
+                    GetCharNotes(SoapyData.Chars(iCharCount))
                     iCharCount = iCharCount + 1
                 End If
 
@@ -251,7 +252,7 @@ Public Class SoapyIO
 
     End Sub
 
-    Private Function GetClassName(Index As Integer)
+    Public Function GetClassName(Index As Integer)
         Dim iLoop As Integer
         Dim ReturnName = New String("")
 
@@ -309,6 +310,15 @@ Public Class SoapyIO
 
     Private Sub CloseOutputStream()
         OutputStream.Close()
+    End Sub
+
+    'Char notes
+    Private Sub GetCharNotes(ByRef CharDetails As CharDetails)
+        GetCharBagNotes(CharDetails)
+    End Sub
+
+    Private Sub GetCharBagNotes(ByRef CharDetails As CharDetails)
+        CharDetails.BagNotes = SoapyData.SoapyConst.GetBagNotes(CharDetails.Name, CharDetails.Realm)
     End Sub
 
     'TEST

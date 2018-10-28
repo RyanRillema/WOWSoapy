@@ -26,12 +26,20 @@
     Private Sub RefreshForm()
         CurrChar = oSoapyData.Chars(CurrPos)
         RefreshGeneral()
+        RefreshNotes()
         RefreshProfs()
     End Sub
 
     Private Sub RefreshGeneral()
         lbName.Text = CurrChar.Name
         lbRealm.Text = CurrChar.Realm
+        lbClass.Text = oSoapyData.SoapyIO.GetClassName(CurrChar.CharClass)
+        lbLevel.Text = CurrChar.Level
+        lbItemLevel.Text = ""
+    End Sub
+
+    Private Sub RefreshNotes()
+        lbBagNotes.Text = CurrChar.BagNotes
     End Sub
 
     Private Sub RefreshProfs()
@@ -78,8 +86,8 @@
             lbProf2Draenor.Text = CurrChar.getPrimaryProfession(CurrChar, "Draenor", NameB).Rank
             lbProf1Legion.Text = CurrChar.getPrimaryProfession(CurrChar, "Legion", NameA).Rank
             lbProf2Legion.Text = CurrChar.getPrimaryProfession(CurrChar, "Legion", NameB).Rank
-            lbProf1Azeroth.Text = CurrChar.getPrimaryProfession(CurrChar, "Azeroth", NameA).Rank
-            lbProf2Azeroth.Text = CurrChar.getPrimaryProfession(CurrChar, "Azeroth", NameB).Rank
+            lbProf1Azeroth.Text = CurrChar.getPrimaryProfession(CurrChar, "Kul Tiran", NameA).Rank
+            lbProf2Azeroth.Text = CurrChar.getPrimaryProfession(CurrChar, "Kul Tiran", NameB).Rank
 
             lbCookingVanilla.Text = CurrChar.getSecondaryProfession(CurrChar, "", "Cooking").Rank
             lbFishingVanilla.Text = CurrChar.getSecondaryProfession(CurrChar, "", "Fishing").Rank
@@ -95,8 +103,8 @@
             lbFishingDraenor.Text = CurrChar.getSecondaryProfession(CurrChar, "Draenor", "Fishing").Rank
             lbCookingLegion.Text = CurrChar.getSecondaryProfession(CurrChar, "Legion", "Cooking").Rank
             lbFishingLegion.Text = CurrChar.getSecondaryProfession(CurrChar, "Legion", "Fishing").Rank
-            lbCookingAzeroth.Text = CurrChar.getSecondaryProfession(CurrChar, "Azeroth", "Cooking").Rank
-            lbFishingAzeroth.Text = CurrChar.getSecondaryProfession(CurrChar, "Azeroth", "Fishing").Rank
+            lbCookingAzeroth.Text = CurrChar.getSecondaryProfession(CurrChar, "Kul Tiran", "Cooking").Rank
+            lbFishingAzeroth.Text = CurrChar.getSecondaryProfession(CurrChar, "Kul Tiran", "Fishing").Rank
             lbArchaelogyVanilla.Text = CurrChar.getSecondaryProfession(CurrChar, "", "Archaeology").Rank
 
         Catch
