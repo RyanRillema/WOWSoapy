@@ -1,6 +1,8 @@
 ﻿Public Class SoapyConst
     Public HeadingCount As Integer = 23
     Public Headings(36) As String
+
+    'Realms
     Public LightCased = New String("Lightbringer")
     Public MazigrosCased = New String("Mazrigos")
     Public NagrandCased = New String("Nagrand")
@@ -9,6 +11,13 @@
     Public BloodCased = New String("Bloodhoof")
     Public ChamberCased = New String("Chamber of Aspects")
     Public QuelCased = New String("Quel 'thalas")
+
+    'Colour
+    Public ColourLevelZero As Color = Color.Red
+    Public ColourLevelLow As Color = Color.OrangeRed
+    Public ColourLevelMedium As Color = Color.SpringGreen
+    Public ColourLevelHigh As Color = Color.YellowGreen
+    Public ColourLevelFull As Color = Color.Green
 
     Public Sub New()
         SetConst()

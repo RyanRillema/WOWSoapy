@@ -137,17 +137,24 @@
 
     Private Sub SetLabelColourByValue(ByRef oLblLabel As Label, iMaxValue As Integer)
 
-        Dim iSegments = iMaxValue / 25
-        Dim iLabelValue = oLblLabel.Text
+        Dim iSegments As Integer = iMaxValue / 25
+        Dim iLabelValue As Integer = oLblLabel.Text
 
         Select Case iLabelValue
             Case 0
-                oLblLabel.ForeColor = Color.Red
+                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourLevelZero
 
-            'Case < iSegments / 3 * 25
+            Case <= 10 * iSegments
+                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourLevelLow
+
+            Case <= 15 * iSegments
+                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourLevelMedium
+
+            Case < 25 * iSegments
+                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourLevelHigh
 
             Case iMaxValue
-                oLblLabel.ForeColor = Color.Green
+                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourLevelFull
 
             Case Else
                 oLblLabel.ForeColor = Color.Black

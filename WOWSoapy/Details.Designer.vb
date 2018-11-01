@@ -91,8 +91,8 @@ Partial Class Details
         Me.tlpNameLeft = New System.Windows.Forms.TableLayoutPanel()
         Me.lbName = New System.Windows.Forms.Label()
         Me.lbRealm = New System.Windows.Forms.Label()
-        Me.lbLevel = New System.Windows.Forms.Label()
         Me.lbItemLevel = New System.Windows.Forms.Label()
+        Me.lbLevel = New System.Windows.Forms.Label()
         Me.lbClass = New System.Windows.Forms.Label()
         Me.tlpNotesMain = New System.Windows.Forms.TableLayoutPanel()
         Me.tlpBagNotes = New System.Windows.Forms.TableLayoutPanel()
@@ -352,6 +352,7 @@ Partial Class Details
         '
         Me.lbArchaelogyAzeroth.AutoSize = True
         Me.lbArchaelogyAzeroth.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbArchaelogyAzeroth.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbArchaelogyAzeroth.Location = New System.Drawing.Point(433, 208)
         Me.lbArchaelogyAzeroth.Name = "lbArchaelogyAzeroth"
         Me.lbArchaelogyAzeroth.Size = New System.Drawing.Size(85, 26)
@@ -362,6 +363,7 @@ Partial Class Details
         '
         Me.lbFishingAzeroth.AutoSize = True
         Me.lbFishingAzeroth.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbFishingAzeroth.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbFishingAzeroth.Location = New System.Drawing.Point(347, 208)
         Me.lbFishingAzeroth.Name = "lbFishingAzeroth"
         Me.lbFishingAzeroth.Size = New System.Drawing.Size(80, 26)
@@ -372,6 +374,7 @@ Partial Class Details
         '
         Me.lbCookingAzeroth.AutoSize = True
         Me.lbCookingAzeroth.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbCookingAzeroth.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbCookingAzeroth.Location = New System.Drawing.Point(261, 208)
         Me.lbCookingAzeroth.Name = "lbCookingAzeroth"
         Me.lbCookingAzeroth.Size = New System.Drawing.Size(80, 26)
@@ -382,6 +385,7 @@ Partial Class Details
         '
         Me.lbProf2Azeroth.AutoSize = True
         Me.lbProf2Azeroth.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbProf2Azeroth.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbProf2Azeroth.Location = New System.Drawing.Point(175, 208)
         Me.lbProf2Azeroth.Name = "lbProf2Azeroth"
         Me.lbProf2Azeroth.Size = New System.Drawing.Size(80, 26)
@@ -392,6 +396,7 @@ Partial Class Details
         '
         Me.lbProf1Azeroth.AutoSize = True
         Me.lbProf1Azeroth.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbProf1Azeroth.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbProf1Azeroth.Location = New System.Drawing.Point(89, 208)
         Me.lbProf1Azeroth.Name = "lbProf1Azeroth"
         Me.lbProf1Azeroth.Size = New System.Drawing.Size(80, 26)
@@ -413,6 +418,7 @@ Partial Class Details
         '
         Me.lbArchaelogyLegion.AutoSize = True
         Me.lbArchaelogyLegion.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbArchaelogyLegion.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbArchaelogyLegion.Location = New System.Drawing.Point(433, 182)
         Me.lbArchaelogyLegion.Name = "lbArchaelogyLegion"
         Me.lbArchaelogyLegion.Size = New System.Drawing.Size(85, 26)
@@ -423,6 +429,7 @@ Partial Class Details
         '
         Me.lbFishingLegion.AutoSize = True
         Me.lbFishingLegion.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbFishingLegion.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbFishingLegion.Location = New System.Drawing.Point(347, 182)
         Me.lbFishingLegion.Name = "lbFishingLegion"
         Me.lbFishingLegion.Size = New System.Drawing.Size(80, 26)
@@ -433,6 +440,7 @@ Partial Class Details
         '
         Me.lbCookingLegion.AutoSize = True
         Me.lbCookingLegion.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbCookingLegion.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbCookingLegion.Location = New System.Drawing.Point(261, 182)
         Me.lbCookingLegion.Name = "lbCookingLegion"
         Me.lbCookingLegion.Size = New System.Drawing.Size(80, 26)
@@ -443,6 +451,7 @@ Partial Class Details
         '
         Me.lbProf2Legion.AutoSize = True
         Me.lbProf2Legion.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbProf2Legion.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbProf2Legion.Location = New System.Drawing.Point(175, 182)
         Me.lbProf2Legion.Name = "lbProf2Legion"
         Me.lbProf2Legion.Size = New System.Drawing.Size(80, 26)
@@ -453,6 +462,7 @@ Partial Class Details
         '
         Me.lbProf1Legion.AutoSize = True
         Me.lbProf1Legion.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbProf1Legion.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbProf1Legion.Location = New System.Drawing.Point(89, 182)
         Me.lbProf1Legion.Name = "lbProf1Legion"
         Me.lbProf1Legion.Size = New System.Drawing.Size(80, 26)
@@ -474,6 +484,7 @@ Partial Class Details
         '
         Me.lbArchaelogyDraenor.AutoSize = True
         Me.lbArchaelogyDraenor.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbArchaelogyDraenor.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbArchaelogyDraenor.Location = New System.Drawing.Point(433, 156)
         Me.lbArchaelogyDraenor.Name = "lbArchaelogyDraenor"
         Me.lbArchaelogyDraenor.Size = New System.Drawing.Size(85, 26)
@@ -484,6 +495,7 @@ Partial Class Details
         '
         Me.lbFishingDraenor.AutoSize = True
         Me.lbFishingDraenor.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbFishingDraenor.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbFishingDraenor.Location = New System.Drawing.Point(347, 156)
         Me.lbFishingDraenor.Name = "lbFishingDraenor"
         Me.lbFishingDraenor.Size = New System.Drawing.Size(80, 26)
@@ -494,6 +506,7 @@ Partial Class Details
         '
         Me.lbCookingDraenor.AutoSize = True
         Me.lbCookingDraenor.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbCookingDraenor.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbCookingDraenor.Location = New System.Drawing.Point(261, 156)
         Me.lbCookingDraenor.Name = "lbCookingDraenor"
         Me.lbCookingDraenor.Size = New System.Drawing.Size(80, 26)
@@ -504,6 +517,7 @@ Partial Class Details
         '
         Me.lbProf2Draenor.AutoSize = True
         Me.lbProf2Draenor.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbProf2Draenor.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbProf2Draenor.Location = New System.Drawing.Point(175, 156)
         Me.lbProf2Draenor.Name = "lbProf2Draenor"
         Me.lbProf2Draenor.Size = New System.Drawing.Size(80, 26)
@@ -514,6 +528,7 @@ Partial Class Details
         '
         Me.lbProf1Draenor.AutoSize = True
         Me.lbProf1Draenor.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbProf1Draenor.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbProf1Draenor.Location = New System.Drawing.Point(89, 156)
         Me.lbProf1Draenor.Name = "lbProf1Draenor"
         Me.lbProf1Draenor.Size = New System.Drawing.Size(80, 26)
@@ -535,6 +550,7 @@ Partial Class Details
         '
         Me.lbArchaelogyPanda.AutoSize = True
         Me.lbArchaelogyPanda.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbArchaelogyPanda.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbArchaelogyPanda.Location = New System.Drawing.Point(433, 130)
         Me.lbArchaelogyPanda.Name = "lbArchaelogyPanda"
         Me.lbArchaelogyPanda.Size = New System.Drawing.Size(85, 26)
@@ -545,6 +561,7 @@ Partial Class Details
         '
         Me.lbFishingPanda.AutoSize = True
         Me.lbFishingPanda.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbFishingPanda.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbFishingPanda.Location = New System.Drawing.Point(347, 130)
         Me.lbFishingPanda.Name = "lbFishingPanda"
         Me.lbFishingPanda.Size = New System.Drawing.Size(80, 26)
@@ -555,6 +572,7 @@ Partial Class Details
         '
         Me.lbCookingPanda.AutoSize = True
         Me.lbCookingPanda.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbCookingPanda.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbCookingPanda.Location = New System.Drawing.Point(261, 130)
         Me.lbCookingPanda.Name = "lbCookingPanda"
         Me.lbCookingPanda.Size = New System.Drawing.Size(80, 26)
@@ -565,6 +583,7 @@ Partial Class Details
         '
         Me.lbProf2Panda.AutoSize = True
         Me.lbProf2Panda.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbProf2Panda.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbProf2Panda.Location = New System.Drawing.Point(175, 130)
         Me.lbProf2Panda.Name = "lbProf2Panda"
         Me.lbProf2Panda.Size = New System.Drawing.Size(80, 26)
@@ -575,6 +594,7 @@ Partial Class Details
         '
         Me.lbProf1Panda.AutoSize = True
         Me.lbProf1Panda.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbProf1Panda.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbProf1Panda.Location = New System.Drawing.Point(89, 130)
         Me.lbProf1Panda.Name = "lbProf1Panda"
         Me.lbProf1Panda.Size = New System.Drawing.Size(80, 26)
@@ -596,6 +616,7 @@ Partial Class Details
         '
         Me.lbArchaelogyCata.AutoSize = True
         Me.lbArchaelogyCata.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbArchaelogyCata.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbArchaelogyCata.Location = New System.Drawing.Point(433, 104)
         Me.lbArchaelogyCata.Name = "lbArchaelogyCata"
         Me.lbArchaelogyCata.Size = New System.Drawing.Size(85, 26)
@@ -606,6 +627,7 @@ Partial Class Details
         '
         Me.lbFishingCata.AutoSize = True
         Me.lbFishingCata.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbFishingCata.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbFishingCata.Location = New System.Drawing.Point(347, 104)
         Me.lbFishingCata.Name = "lbFishingCata"
         Me.lbFishingCata.Size = New System.Drawing.Size(80, 26)
@@ -616,6 +638,7 @@ Partial Class Details
         '
         Me.lbCookingCata.AutoSize = True
         Me.lbCookingCata.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbCookingCata.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbCookingCata.Location = New System.Drawing.Point(261, 104)
         Me.lbCookingCata.Name = "lbCookingCata"
         Me.lbCookingCata.Size = New System.Drawing.Size(80, 26)
@@ -626,6 +649,7 @@ Partial Class Details
         '
         Me.lbProf2Cata.AutoSize = True
         Me.lbProf2Cata.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbProf2Cata.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbProf2Cata.Location = New System.Drawing.Point(175, 104)
         Me.lbProf2Cata.Name = "lbProf2Cata"
         Me.lbProf2Cata.Size = New System.Drawing.Size(80, 26)
@@ -636,6 +660,7 @@ Partial Class Details
         '
         Me.lbProf1Cata.AutoSize = True
         Me.lbProf1Cata.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbProf1Cata.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbProf1Cata.Location = New System.Drawing.Point(89, 104)
         Me.lbProf1Cata.Name = "lbProf1Cata"
         Me.lbProf1Cata.Size = New System.Drawing.Size(80, 26)
@@ -657,6 +682,7 @@ Partial Class Details
         '
         Me.lbArchaelogyFT.AutoSize = True
         Me.lbArchaelogyFT.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbArchaelogyFT.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbArchaelogyFT.Location = New System.Drawing.Point(433, 78)
         Me.lbArchaelogyFT.Name = "lbArchaelogyFT"
         Me.lbArchaelogyFT.Size = New System.Drawing.Size(85, 26)
@@ -667,6 +693,7 @@ Partial Class Details
         '
         Me.lbFishingFT.AutoSize = True
         Me.lbFishingFT.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbFishingFT.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbFishingFT.Location = New System.Drawing.Point(347, 78)
         Me.lbFishingFT.Name = "lbFishingFT"
         Me.lbFishingFT.Size = New System.Drawing.Size(80, 26)
@@ -677,6 +704,7 @@ Partial Class Details
         '
         Me.lbCookingFT.AutoSize = True
         Me.lbCookingFT.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbCookingFT.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbCookingFT.Location = New System.Drawing.Point(261, 78)
         Me.lbCookingFT.Name = "lbCookingFT"
         Me.lbCookingFT.Size = New System.Drawing.Size(80, 26)
@@ -687,6 +715,7 @@ Partial Class Details
         '
         Me.lbProf2FT.AutoSize = True
         Me.lbProf2FT.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbProf2FT.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbProf2FT.Location = New System.Drawing.Point(175, 78)
         Me.lbProf2FT.Name = "lbProf2FT"
         Me.lbProf2FT.Size = New System.Drawing.Size(80, 26)
@@ -697,6 +726,7 @@ Partial Class Details
         '
         Me.lbProf1FT.AutoSize = True
         Me.lbProf1FT.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbProf1FT.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbProf1FT.Location = New System.Drawing.Point(89, 78)
         Me.lbProf1FT.Name = "lbProf1FT"
         Me.lbProf1FT.Size = New System.Drawing.Size(80, 26)
@@ -718,6 +748,7 @@ Partial Class Details
         '
         Me.lbArchaelogyBC.AutoSize = True
         Me.lbArchaelogyBC.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbArchaelogyBC.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbArchaelogyBC.Location = New System.Drawing.Point(433, 52)
         Me.lbArchaelogyBC.Name = "lbArchaelogyBC"
         Me.lbArchaelogyBC.Size = New System.Drawing.Size(85, 26)
@@ -728,6 +759,7 @@ Partial Class Details
         '
         Me.lbFishingBC.AutoSize = True
         Me.lbFishingBC.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbFishingBC.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbFishingBC.Location = New System.Drawing.Point(347, 52)
         Me.lbFishingBC.Name = "lbFishingBC"
         Me.lbFishingBC.Size = New System.Drawing.Size(80, 26)
@@ -738,6 +770,7 @@ Partial Class Details
         '
         Me.lbCookingBC.AutoSize = True
         Me.lbCookingBC.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbCookingBC.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbCookingBC.Location = New System.Drawing.Point(261, 52)
         Me.lbCookingBC.Name = "lbCookingBC"
         Me.lbCookingBC.Size = New System.Drawing.Size(80, 26)
@@ -759,6 +792,7 @@ Partial Class Details
         '
         Me.lbProf1BC.AutoSize = True
         Me.lbProf1BC.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbProf1BC.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbProf1BC.Location = New System.Drawing.Point(89, 52)
         Me.lbProf1BC.Name = "lbProf1BC"
         Me.lbProf1BC.Size = New System.Drawing.Size(80, 26)
@@ -857,6 +891,7 @@ Partial Class Details
         '
         Me.lbProf1Vanilla.AutoSize = True
         Me.lbProf1Vanilla.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbProf1Vanilla.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbProf1Vanilla.Location = New System.Drawing.Point(89, 26)
         Me.lbProf1Vanilla.Name = "lbProf1Vanilla"
         Me.lbProf1Vanilla.Size = New System.Drawing.Size(80, 26)
@@ -867,6 +902,7 @@ Partial Class Details
         '
         Me.lbProf2Vanilla.AutoSize = True
         Me.lbProf2Vanilla.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbProf2Vanilla.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbProf2Vanilla.Location = New System.Drawing.Point(175, 26)
         Me.lbProf2Vanilla.Name = "lbProf2Vanilla"
         Me.lbProf2Vanilla.Size = New System.Drawing.Size(80, 26)
@@ -877,6 +913,7 @@ Partial Class Details
         '
         Me.lbCookingVanilla.AutoSize = True
         Me.lbCookingVanilla.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbCookingVanilla.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbCookingVanilla.Location = New System.Drawing.Point(261, 26)
         Me.lbCookingVanilla.Name = "lbCookingVanilla"
         Me.lbCookingVanilla.Size = New System.Drawing.Size(80, 26)
@@ -887,6 +924,7 @@ Partial Class Details
         '
         Me.lbFishingVanilla.AutoSize = True
         Me.lbFishingVanilla.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbFishingVanilla.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbFishingVanilla.Location = New System.Drawing.Point(347, 26)
         Me.lbFishingVanilla.Name = "lbFishingVanilla"
         Me.lbFishingVanilla.Size = New System.Drawing.Size(80, 26)
@@ -897,6 +935,7 @@ Partial Class Details
         '
         Me.lbArchaelogyVanilla.AutoSize = True
         Me.lbArchaelogyVanilla.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbArchaelogyVanilla.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbArchaelogyVanilla.Location = New System.Drawing.Point(433, 26)
         Me.lbArchaelogyVanilla.Name = "lbArchaelogyVanilla"
         Me.lbArchaelogyVanilla.Size = New System.Drawing.Size(85, 26)
@@ -967,19 +1006,6 @@ Partial Class Details
         Me.lbRealm.Text = "Testrealm"
         Me.lbRealm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lbLevel
-        '
-        Me.lbLevel.AutoSize = True
-        Me.lbLevel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lbLevel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbLevel.Location = New System.Drawing.Point(2, 108)
-        Me.lbLevel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.lbLevel.Name = "lbLevel"
-        Me.lbLevel.Size = New System.Drawing.Size(255, 34)
-        Me.lbLevel.TabIndex = 9
-        Me.lbLevel.Text = "100"
-        Me.lbLevel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'lbItemLevel
         '
         Me.lbItemLevel.AutoSize = True
@@ -992,6 +1018,19 @@ Partial Class Details
         Me.lbItemLevel.TabIndex = 10
         Me.lbItemLevel.Text = "333"
         Me.lbItemLevel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbLevel
+        '
+        Me.lbLevel.AutoSize = True
+        Me.lbLevel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbLevel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbLevel.Location = New System.Drawing.Point(2, 108)
+        Me.lbLevel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbLevel.Name = "lbLevel"
+        Me.lbLevel.Size = New System.Drawing.Size(255, 34)
+        Me.lbLevel.TabIndex = 9
+        Me.lbLevel.Text = "100"
+        Me.lbLevel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lbClass
         '
@@ -1034,7 +1073,7 @@ Partial Class Details
         Me.tlpBagNotes.Name = "tlpBagNotes"
         Me.tlpBagNotes.RowCount = 1
         Me.tlpBagNotes.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tlpBagNotes.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.tlpBagNotes.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 141.0!))
         Me.tlpBagNotes.Size = New System.Drawing.Size(260, 141)
         Me.tlpBagNotes.TabIndex = 0
         '
