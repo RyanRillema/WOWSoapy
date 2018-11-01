@@ -70,24 +70,41 @@
 
             'Headings
             lbProf1Name.Text = NameA
+            SetLabelColour(lbProf1Name)
             lbProf2Name.Text = NameB
 
             lbProf1Vanilla.Text = CurrChar.getPrimaryProfession(CurrChar, "", NameA).Rank
+            SetLabelColourByValue(lbProf1Vanilla, 300)
             lbProf2Vanilla.Text = CurrChar.getPrimaryProfession(CurrChar, "", NameB).Rank
+            SetLabelColourByValue(lbProf2Vanilla, 300)
             lbProf1BC.Text = CurrChar.getPrimaryProfession(CurrChar, "Outland", NameA).Rank
+            SetLabelColourByValue(lbProf1BC, 75)
             lbProf2BC.Text = CurrChar.getPrimaryProfession(CurrChar, "Outland", NameB).Rank
+            SetLabelColourByValue(lbProf2BC, 75)
             lbProf1FT.Text = CurrChar.getPrimaryProfession(CurrChar, "Northrend", NameA).Rank
+            SetLabelColourByValue(lbProf1FT, 75)
             lbProf2FT.Text = CurrChar.getPrimaryProfession(CurrChar, "Northrend", NameB).Rank
+            SetLabelColourByValue(lbProf2FT, 75)
             lbProf1Cata.Text = CurrChar.getPrimaryProfession(CurrChar, "Cataclysm", NameA).Rank
+            SetLabelColourByValue(lbProf1Cata, 75)
             lbProf2Cata.Text = CurrChar.getPrimaryProfession(CurrChar, "Cataclysm", NameB).Rank
+            SetLabelColourByValue(lbProf2Cata, 75)
             lbProf1Panda.Text = CurrChar.getPrimaryProfession(CurrChar, "Pandaria", NameA).Rank
+            SetLabelColourByValue(lbProf1Panda, 75)
             lbProf2Panda.Text = CurrChar.getPrimaryProfession(CurrChar, "Pandaria", NameB).Rank
+            SetLabelColourByValue(lbProf2Panda, 75)
             lbProf1Draenor.Text = CurrChar.getPrimaryProfession(CurrChar, "Draenor", NameA).Rank
+            SetLabelColourByValue(lbProf1Draenor, 100)
             lbProf2Draenor.Text = CurrChar.getPrimaryProfession(CurrChar, "Draenor", NameB).Rank
+            SetLabelColourByValue(lbProf2Draenor, 100)
             lbProf1Legion.Text = CurrChar.getPrimaryProfession(CurrChar, "Legion", NameA).Rank
+            SetLabelColourByValue(lbProf1Legion, 100)
             lbProf2Legion.Text = CurrChar.getPrimaryProfession(CurrChar, "Legion", NameB).Rank
+            SetLabelColourByValue(lbProf2Legion, 100)
             lbProf1Azeroth.Text = CurrChar.getPrimaryProfession(CurrChar, "Kul Tiran", NameA).Rank
+            SetLabelColourByValue(lbProf1Azeroth, 150)
             lbProf2Azeroth.Text = CurrChar.getPrimaryProfession(CurrChar, "Kul Tiran", NameB).Rank
+            SetLabelColourByValue(lbProf2Azeroth, 150)
 
             lbCookingVanilla.Text = CurrChar.getSecondaryProfession(CurrChar, "", "Cooking").Rank
             lbFishingVanilla.Text = CurrChar.getSecondaryProfession(CurrChar, "", "Fishing").Rank
@@ -112,6 +129,34 @@
 
     End Sub
 
+    Private Sub SetLabelColour(ByRef oLblLabel As Label)
+
+        oLblLabel.ForeColor = Color.Blue
+
+    End Sub
+
+    Private Sub SetLabelColourByValue(ByRef oLblLabel As Label, iMaxValue As Integer)
+
+        Dim iSegments = iMaxValue / 25
+        Dim iLabelValue = oLblLabel.Text
+
+        Select Case iLabelValue
+            Case 0
+                oLblLabel.ForeColor = Color.Red
+
+            'Case < iSegments / 3 * 25
+
+            Case iMaxValue
+                oLblLabel.ForeColor = Color.Green
+
+            Case Else
+                oLblLabel.ForeColor = Color.Black
+
+        End Select
+
+    End Sub
+
+    'Button functions
     Private Sub cmdClose_Click(sender As Object, e As EventArgs) Handles cmdClose.Click
         HideForm()
     End Sub
