@@ -19,6 +19,21 @@
     Public ColourLevelHigh As Color = Color.YellowGreen
     Public ColourLevelFull As Color = Color.Green
 
+    Public ColourClassDeathKnight As Color = Color.FromArgb(196, 30, 59)
+    Public ColourClassDemonHunter As Color = Color.FromArgb(163, 48, 201)
+    Public ColourClassDruid As Color = Color.FromArgb(255, 125, 10)
+    Public ColourClassHunter As Color = Color.FromArgb(171, 212, 115)
+    Public ColourClassMage As Color = Color.FromArgb(105, 204, 240)
+    Public ColourClassMonk As Color = Color.FromArgb(0, 255, 150)
+    Public ColourClassPaladin As Color = Color.FromArgb(245, 140, 186)
+    Public ColourClassPriest As Color = Color.FromArgb(255, 255, 255)
+    Public ColourClassRogue As Color = Color.FromArgb(255, 245, 105)
+    Public ColourClassShaman As Color = Color.FromArgb(0, 112, 222)
+    Public ColourClassWarlock As Color = Color.FromArgb(148, 130, 201)
+    Public ColourClassWarrior As Color = Color.FromArgb(199, 156, 110)
+
+    'http:// <region> + .battle.net/static-render/ + <region> + / + <the string you got from API as thumbnail>
+
     Public Sub New()
         SetConst()
     End Sub
@@ -51,10 +66,6 @@
                 Select Case sName
                     Case "Splifshot"
                         sBagNotes = "Inscription items"
-                    Case "Greyly"
-                        sBagNotes = "Test 2"
-                    Case "Shroomhunter"
-                        sBagNotes = "Test"
                 End Select
 
         End Select
