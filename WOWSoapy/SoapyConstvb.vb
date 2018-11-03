@@ -1,4 +1,9 @@
 ﻿Public Class SoapyConst
+
+    'General
+    Public Version As String = "0.2.0"
+
+    'Headings
     Public HeadingCount As Integer = 23
     Public Headings(36) As String
 
@@ -44,8 +49,10 @@
         sBagNotes = ""
 
         Select Case sRealm
-            Case Lightcased
+            Case LightCased
                 Select Case sName
+                    Case ""
+                        sBagNotes = ""
                     Case "Ryanhunter"
                         sBagNotes = "Pet items"
                     Case "Shroomhunter"
@@ -58,14 +65,20 @@
                         sBagNotes = "Excess cloth, Bolts of cloth"
                     Case "Softshadow"
                         sBagNotes = "Excess Leather, Leather Hide, Scales"
+                    Case "Frozenstar"
+                        sBagNotes = "Excess Herbs, Herb fractions"
                     Case "Momonk"
                         sBagNotes = "Enchanting items"
                 End Select
 
             Case MazigrosCased
                 Select Case sName
+                    Case ""
+                        sBagNotes = ""
                     Case "Splifshot"
                         sBagNotes = "Inscription items"
+                    Case "Loneshot"
+                        sBagNotes = "Legion Herbs?"
                 End Select
 
         End Select
@@ -73,6 +86,23 @@
         Return sBagNotes
     End Function
 
+    Public Function GetRealesNotes(Optional sVersion As String = "All") As String
+        Dim sNotes As String = ""
+
+        'Check all
+        Select Case sVersion
+            Case "0.1.1", "All"
+                sNotes = sNotes & "/n" & "Intital Release"
+            Case "0.2.0", "All"
+                sNotes = sNotes & "/n" & "Add details form functionality. Added to Git source control"
+        End Select
+
+        Return sNotes
+    End Function
+
+    Public Function GetVersion() As String
+        Return "Version: " & Version
+    End Function
     Private Sub SetConst()
         Headings(1) = "Name"
         Headings(2) = "Level"

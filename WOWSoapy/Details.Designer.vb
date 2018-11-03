@@ -75,11 +75,10 @@ Partial Class Details
         Me.lbProf2BC = New System.Windows.Forms.Label()
         Me.lbProf1BC = New System.Windows.Forms.Label()
         Me.lbBCLabel = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.lbVanillaLabel = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblCookingLabel = New System.Windows.Forms.Label()
         Me.lbProf2Name = New System.Windows.Forms.Label()
         Me.lbProf1Name = New System.Windows.Forms.Label()
         Me.lbProf1Vanilla = New System.Windows.Forms.Label()
@@ -88,15 +87,17 @@ Partial Class Details
         Me.lbFishingVanilla = New System.Windows.Forms.Label()
         Me.lbArchaelogyVanilla = New System.Windows.Forms.Label()
         Me.tlpNameMain = New System.Windows.Forms.TableLayoutPanel()
-        Me.tlpNameLeft = New System.Windows.Forms.TableLayoutPanel()
-        Me.lbName = New System.Windows.Forms.Label()
-        Me.lbRealm = New System.Windows.Forms.Label()
+        Me.tlpNameLeft2 = New System.Windows.Forms.TableLayoutPanel()
         Me.lbItemLevel = New System.Windows.Forms.Label()
+        Me.lbRealm = New System.Windows.Forms.Label()
         Me.lbLevel = New System.Windows.Forms.Label()
+        Me.lbName = New System.Windows.Forms.Label()
         Me.lbClass = New System.Windows.Forms.Label()
+        Me.pbPic = New System.Windows.Forms.PictureBox()
         Me.tlpNotesMain = New System.Windows.Forms.TableLayoutPanel()
         Me.tlpBagNotes = New System.Windows.Forms.TableLayoutPanel()
         Me.lbBagNotes = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.tlpMain.SuspendLayout()
         Me.tlpControlsMain.SuspendLayout()
         Me.tlpControlsRight.SuspendLayout()
@@ -106,9 +107,11 @@ Partial Class Details
         Me.tlpProfMain.SuspendLayout()
         Me.tlpProfMid.SuspendLayout()
         Me.tlpNameMain.SuspendLayout()
-        Me.tlpNameLeft.SuspendLayout()
+        Me.tlpNameLeft2.SuspendLayout()
+        CType(Me.pbPic, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tlpNotesMain.SuspendLayout()
         Me.tlpBagNotes.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'tlpMain
@@ -236,8 +239,8 @@ Partial Class Details
         'tlpDetailsMain
         '
         Me.tlpDetailsMain.ColumnCount = 2
-        Me.tlpDetailsMain.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tlpDetailsMain.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.tlpDetailsMain.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.tlpDetailsMain.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 650.0!))
         Me.tlpDetailsMain.Controls.Add(Me.tlpProfMain, 1, 0)
         Me.tlpDetailsMain.Controls.Add(Me.tlpNameMain, 0, 0)
         Me.tlpDetailsMain.Controls.Add(Me.tlpNotesMain, 1, 1)
@@ -257,14 +260,14 @@ Partial Class Details
         Me.tlpProfMain.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tlpProfMain.Controls.Add(Me.tlpProfMid, 0, 1)
         Me.tlpProfMain.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tlpProfMain.Location = New System.Drawing.Point(520, 0)
+        Me.tlpProfMain.Location = New System.Drawing.Point(391, 0)
         Me.tlpProfMain.Margin = New System.Windows.Forms.Padding(0)
         Me.tlpProfMain.Name = "tlpProfMain"
         Me.tlpProfMain.RowCount = 3
         Me.tlpProfMain.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10.0!))
         Me.tlpProfMain.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tlpProfMain.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10.0!))
-        Me.tlpProfMain.Size = New System.Drawing.Size(521, 283)
+        Me.tlpProfMain.Size = New System.Drawing.Size(650, 283)
         Me.tlpProfMain.TabIndex = 0
         '
         'tlpProfMid
@@ -318,11 +321,10 @@ Partial Class Details
         Me.tlpProfMid.Controls.Add(Me.lbProf2BC, 2, 2)
         Me.tlpProfMid.Controls.Add(Me.lbProf1BC, 1, 2)
         Me.tlpProfMid.Controls.Add(Me.lbBCLabel, 0, 2)
-        Me.tlpProfMid.Controls.Add(Me.Label1, 0, 0)
         Me.tlpProfMid.Controls.Add(Me.lbVanillaLabel, 0, 1)
         Me.tlpProfMid.Controls.Add(Me.Label5, 5, 0)
         Me.tlpProfMid.Controls.Add(Me.Label4, 4, 0)
-        Me.tlpProfMid.Controls.Add(Me.Label3, 3, 0)
+        Me.tlpProfMid.Controls.Add(Me.lblCookingLabel, 3, 0)
         Me.tlpProfMid.Controls.Add(Me.lbProf2Name, 2, 0)
         Me.tlpProfMid.Controls.Add(Me.lbProf1Name, 1, 0)
         Me.tlpProfMid.Controls.Add(Me.lbProf1Vanilla, 1, 1)
@@ -345,7 +347,7 @@ Partial Class Details
         Me.tlpProfMid.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
         Me.tlpProfMid.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
         Me.tlpProfMid.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.tlpProfMid.Size = New System.Drawing.Size(521, 263)
+        Me.tlpProfMid.Size = New System.Drawing.Size(650, 263)
         Me.tlpProfMid.TabIndex = 0
         '
         'lbArchaelogyAzeroth
@@ -353,9 +355,9 @@ Partial Class Details
         Me.lbArchaelogyAzeroth.AutoSize = True
         Me.lbArchaelogyAzeroth.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbArchaelogyAzeroth.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbArchaelogyAzeroth.Location = New System.Drawing.Point(433, 208)
+        Me.lbArchaelogyAzeroth.Location = New System.Drawing.Point(543, 208)
         Me.lbArchaelogyAzeroth.Name = "lbArchaelogyAzeroth"
-        Me.lbArchaelogyAzeroth.Size = New System.Drawing.Size(85, 26)
+        Me.lbArchaelogyAzeroth.Size = New System.Drawing.Size(104, 26)
         Me.lbArchaelogyAzeroth.TabIndex = 55
         Me.lbArchaelogyAzeroth.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -364,9 +366,9 @@ Partial Class Details
         Me.lbFishingAzeroth.AutoSize = True
         Me.lbFishingAzeroth.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbFishingAzeroth.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbFishingAzeroth.Location = New System.Drawing.Point(347, 208)
+        Me.lbFishingAzeroth.Location = New System.Drawing.Point(435, 208)
         Me.lbFishingAzeroth.Name = "lbFishingAzeroth"
-        Me.lbFishingAzeroth.Size = New System.Drawing.Size(80, 26)
+        Me.lbFishingAzeroth.Size = New System.Drawing.Size(102, 26)
         Me.lbFishingAzeroth.TabIndex = 54
         Me.lbFishingAzeroth.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -375,9 +377,9 @@ Partial Class Details
         Me.lbCookingAzeroth.AutoSize = True
         Me.lbCookingAzeroth.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbCookingAzeroth.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbCookingAzeroth.Location = New System.Drawing.Point(261, 208)
+        Me.lbCookingAzeroth.Location = New System.Drawing.Point(327, 208)
         Me.lbCookingAzeroth.Name = "lbCookingAzeroth"
-        Me.lbCookingAzeroth.Size = New System.Drawing.Size(80, 26)
+        Me.lbCookingAzeroth.Size = New System.Drawing.Size(102, 26)
         Me.lbCookingAzeroth.TabIndex = 53
         Me.lbCookingAzeroth.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -386,9 +388,9 @@ Partial Class Details
         Me.lbProf2Azeroth.AutoSize = True
         Me.lbProf2Azeroth.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbProf2Azeroth.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbProf2Azeroth.Location = New System.Drawing.Point(175, 208)
+        Me.lbProf2Azeroth.Location = New System.Drawing.Point(219, 208)
         Me.lbProf2Azeroth.Name = "lbProf2Azeroth"
-        Me.lbProf2Azeroth.Size = New System.Drawing.Size(80, 26)
+        Me.lbProf2Azeroth.Size = New System.Drawing.Size(102, 26)
         Me.lbProf2Azeroth.TabIndex = 52
         Me.lbProf2Azeroth.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -397,9 +399,9 @@ Partial Class Details
         Me.lbProf1Azeroth.AutoSize = True
         Me.lbProf1Azeroth.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbProf1Azeroth.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbProf1Azeroth.Location = New System.Drawing.Point(89, 208)
+        Me.lbProf1Azeroth.Location = New System.Drawing.Point(111, 208)
         Me.lbProf1Azeroth.Name = "lbProf1Azeroth"
-        Me.lbProf1Azeroth.Size = New System.Drawing.Size(80, 26)
+        Me.lbProf1Azeroth.Size = New System.Drawing.Size(102, 26)
         Me.lbProf1Azeroth.TabIndex = 51
         Me.lbProf1Azeroth.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -409,7 +411,7 @@ Partial Class Details
         Me.lbAzerothLabel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbAzerothLabel.Location = New System.Drawing.Point(3, 208)
         Me.lbAzerothLabel.Name = "lbAzerothLabel"
-        Me.lbAzerothLabel.Size = New System.Drawing.Size(80, 26)
+        Me.lbAzerothLabel.Size = New System.Drawing.Size(102, 26)
         Me.lbAzerothLabel.TabIndex = 50
         Me.lbAzerothLabel.Text = "Azeroth"
         Me.lbAzerothLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -419,9 +421,9 @@ Partial Class Details
         Me.lbArchaelogyLegion.AutoSize = True
         Me.lbArchaelogyLegion.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbArchaelogyLegion.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbArchaelogyLegion.Location = New System.Drawing.Point(433, 182)
+        Me.lbArchaelogyLegion.Location = New System.Drawing.Point(543, 182)
         Me.lbArchaelogyLegion.Name = "lbArchaelogyLegion"
-        Me.lbArchaelogyLegion.Size = New System.Drawing.Size(85, 26)
+        Me.lbArchaelogyLegion.Size = New System.Drawing.Size(104, 26)
         Me.lbArchaelogyLegion.TabIndex = 49
         Me.lbArchaelogyLegion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -430,9 +432,9 @@ Partial Class Details
         Me.lbFishingLegion.AutoSize = True
         Me.lbFishingLegion.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbFishingLegion.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbFishingLegion.Location = New System.Drawing.Point(347, 182)
+        Me.lbFishingLegion.Location = New System.Drawing.Point(435, 182)
         Me.lbFishingLegion.Name = "lbFishingLegion"
-        Me.lbFishingLegion.Size = New System.Drawing.Size(80, 26)
+        Me.lbFishingLegion.Size = New System.Drawing.Size(102, 26)
         Me.lbFishingLegion.TabIndex = 48
         Me.lbFishingLegion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -441,9 +443,9 @@ Partial Class Details
         Me.lbCookingLegion.AutoSize = True
         Me.lbCookingLegion.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbCookingLegion.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbCookingLegion.Location = New System.Drawing.Point(261, 182)
+        Me.lbCookingLegion.Location = New System.Drawing.Point(327, 182)
         Me.lbCookingLegion.Name = "lbCookingLegion"
-        Me.lbCookingLegion.Size = New System.Drawing.Size(80, 26)
+        Me.lbCookingLegion.Size = New System.Drawing.Size(102, 26)
         Me.lbCookingLegion.TabIndex = 47
         Me.lbCookingLegion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -452,9 +454,9 @@ Partial Class Details
         Me.lbProf2Legion.AutoSize = True
         Me.lbProf2Legion.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbProf2Legion.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbProf2Legion.Location = New System.Drawing.Point(175, 182)
+        Me.lbProf2Legion.Location = New System.Drawing.Point(219, 182)
         Me.lbProf2Legion.Name = "lbProf2Legion"
-        Me.lbProf2Legion.Size = New System.Drawing.Size(80, 26)
+        Me.lbProf2Legion.Size = New System.Drawing.Size(102, 26)
         Me.lbProf2Legion.TabIndex = 46
         Me.lbProf2Legion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -463,9 +465,9 @@ Partial Class Details
         Me.lbProf1Legion.AutoSize = True
         Me.lbProf1Legion.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbProf1Legion.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbProf1Legion.Location = New System.Drawing.Point(89, 182)
+        Me.lbProf1Legion.Location = New System.Drawing.Point(111, 182)
         Me.lbProf1Legion.Name = "lbProf1Legion"
-        Me.lbProf1Legion.Size = New System.Drawing.Size(80, 26)
+        Me.lbProf1Legion.Size = New System.Drawing.Size(102, 26)
         Me.lbProf1Legion.TabIndex = 45
         Me.lbProf1Legion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -475,7 +477,7 @@ Partial Class Details
         Me.lbLegionLabel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbLegionLabel.Location = New System.Drawing.Point(3, 182)
         Me.lbLegionLabel.Name = "lbLegionLabel"
-        Me.lbLegionLabel.Size = New System.Drawing.Size(80, 26)
+        Me.lbLegionLabel.Size = New System.Drawing.Size(102, 26)
         Me.lbLegionLabel.TabIndex = 44
         Me.lbLegionLabel.Text = "Legion"
         Me.lbLegionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -485,9 +487,9 @@ Partial Class Details
         Me.lbArchaelogyDraenor.AutoSize = True
         Me.lbArchaelogyDraenor.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbArchaelogyDraenor.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbArchaelogyDraenor.Location = New System.Drawing.Point(433, 156)
+        Me.lbArchaelogyDraenor.Location = New System.Drawing.Point(543, 156)
         Me.lbArchaelogyDraenor.Name = "lbArchaelogyDraenor"
-        Me.lbArchaelogyDraenor.Size = New System.Drawing.Size(85, 26)
+        Me.lbArchaelogyDraenor.Size = New System.Drawing.Size(104, 26)
         Me.lbArchaelogyDraenor.TabIndex = 43
         Me.lbArchaelogyDraenor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -496,9 +498,9 @@ Partial Class Details
         Me.lbFishingDraenor.AutoSize = True
         Me.lbFishingDraenor.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbFishingDraenor.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbFishingDraenor.Location = New System.Drawing.Point(347, 156)
+        Me.lbFishingDraenor.Location = New System.Drawing.Point(435, 156)
         Me.lbFishingDraenor.Name = "lbFishingDraenor"
-        Me.lbFishingDraenor.Size = New System.Drawing.Size(80, 26)
+        Me.lbFishingDraenor.Size = New System.Drawing.Size(102, 26)
         Me.lbFishingDraenor.TabIndex = 42
         Me.lbFishingDraenor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -507,9 +509,9 @@ Partial Class Details
         Me.lbCookingDraenor.AutoSize = True
         Me.lbCookingDraenor.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbCookingDraenor.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbCookingDraenor.Location = New System.Drawing.Point(261, 156)
+        Me.lbCookingDraenor.Location = New System.Drawing.Point(327, 156)
         Me.lbCookingDraenor.Name = "lbCookingDraenor"
-        Me.lbCookingDraenor.Size = New System.Drawing.Size(80, 26)
+        Me.lbCookingDraenor.Size = New System.Drawing.Size(102, 26)
         Me.lbCookingDraenor.TabIndex = 41
         Me.lbCookingDraenor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -518,9 +520,9 @@ Partial Class Details
         Me.lbProf2Draenor.AutoSize = True
         Me.lbProf2Draenor.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbProf2Draenor.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbProf2Draenor.Location = New System.Drawing.Point(175, 156)
+        Me.lbProf2Draenor.Location = New System.Drawing.Point(219, 156)
         Me.lbProf2Draenor.Name = "lbProf2Draenor"
-        Me.lbProf2Draenor.Size = New System.Drawing.Size(80, 26)
+        Me.lbProf2Draenor.Size = New System.Drawing.Size(102, 26)
         Me.lbProf2Draenor.TabIndex = 40
         Me.lbProf2Draenor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -529,9 +531,9 @@ Partial Class Details
         Me.lbProf1Draenor.AutoSize = True
         Me.lbProf1Draenor.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbProf1Draenor.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbProf1Draenor.Location = New System.Drawing.Point(89, 156)
+        Me.lbProf1Draenor.Location = New System.Drawing.Point(111, 156)
         Me.lbProf1Draenor.Name = "lbProf1Draenor"
-        Me.lbProf1Draenor.Size = New System.Drawing.Size(80, 26)
+        Me.lbProf1Draenor.Size = New System.Drawing.Size(102, 26)
         Me.lbProf1Draenor.TabIndex = 39
         Me.lbProf1Draenor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -541,7 +543,7 @@ Partial Class Details
         Me.lbDraenorLabel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbDraenorLabel.Location = New System.Drawing.Point(3, 156)
         Me.lbDraenorLabel.Name = "lbDraenorLabel"
-        Me.lbDraenorLabel.Size = New System.Drawing.Size(80, 26)
+        Me.lbDraenorLabel.Size = New System.Drawing.Size(102, 26)
         Me.lbDraenorLabel.TabIndex = 38
         Me.lbDraenorLabel.Text = "Draenor"
         Me.lbDraenorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -551,9 +553,9 @@ Partial Class Details
         Me.lbArchaelogyPanda.AutoSize = True
         Me.lbArchaelogyPanda.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbArchaelogyPanda.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbArchaelogyPanda.Location = New System.Drawing.Point(433, 130)
+        Me.lbArchaelogyPanda.Location = New System.Drawing.Point(543, 130)
         Me.lbArchaelogyPanda.Name = "lbArchaelogyPanda"
-        Me.lbArchaelogyPanda.Size = New System.Drawing.Size(85, 26)
+        Me.lbArchaelogyPanda.Size = New System.Drawing.Size(104, 26)
         Me.lbArchaelogyPanda.TabIndex = 37
         Me.lbArchaelogyPanda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -562,9 +564,9 @@ Partial Class Details
         Me.lbFishingPanda.AutoSize = True
         Me.lbFishingPanda.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbFishingPanda.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbFishingPanda.Location = New System.Drawing.Point(347, 130)
+        Me.lbFishingPanda.Location = New System.Drawing.Point(435, 130)
         Me.lbFishingPanda.Name = "lbFishingPanda"
-        Me.lbFishingPanda.Size = New System.Drawing.Size(80, 26)
+        Me.lbFishingPanda.Size = New System.Drawing.Size(102, 26)
         Me.lbFishingPanda.TabIndex = 36
         Me.lbFishingPanda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -573,9 +575,9 @@ Partial Class Details
         Me.lbCookingPanda.AutoSize = True
         Me.lbCookingPanda.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbCookingPanda.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbCookingPanda.Location = New System.Drawing.Point(261, 130)
+        Me.lbCookingPanda.Location = New System.Drawing.Point(327, 130)
         Me.lbCookingPanda.Name = "lbCookingPanda"
-        Me.lbCookingPanda.Size = New System.Drawing.Size(80, 26)
+        Me.lbCookingPanda.Size = New System.Drawing.Size(102, 26)
         Me.lbCookingPanda.TabIndex = 35
         Me.lbCookingPanda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -584,9 +586,9 @@ Partial Class Details
         Me.lbProf2Panda.AutoSize = True
         Me.lbProf2Panda.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbProf2Panda.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbProf2Panda.Location = New System.Drawing.Point(175, 130)
+        Me.lbProf2Panda.Location = New System.Drawing.Point(219, 130)
         Me.lbProf2Panda.Name = "lbProf2Panda"
-        Me.lbProf2Panda.Size = New System.Drawing.Size(80, 26)
+        Me.lbProf2Panda.Size = New System.Drawing.Size(102, 26)
         Me.lbProf2Panda.TabIndex = 34
         Me.lbProf2Panda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -595,9 +597,9 @@ Partial Class Details
         Me.lbProf1Panda.AutoSize = True
         Me.lbProf1Panda.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbProf1Panda.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbProf1Panda.Location = New System.Drawing.Point(89, 130)
+        Me.lbProf1Panda.Location = New System.Drawing.Point(111, 130)
         Me.lbProf1Panda.Name = "lbProf1Panda"
-        Me.lbProf1Panda.Size = New System.Drawing.Size(80, 26)
+        Me.lbProf1Panda.Size = New System.Drawing.Size(102, 26)
         Me.lbProf1Panda.TabIndex = 33
         Me.lbProf1Panda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -607,7 +609,7 @@ Partial Class Details
         Me.lbPandaLabel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbPandaLabel.Location = New System.Drawing.Point(3, 130)
         Me.lbPandaLabel.Name = "lbPandaLabel"
-        Me.lbPandaLabel.Size = New System.Drawing.Size(80, 26)
+        Me.lbPandaLabel.Size = New System.Drawing.Size(102, 26)
         Me.lbPandaLabel.TabIndex = 32
         Me.lbPandaLabel.Text = "Panda"
         Me.lbPandaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -617,9 +619,9 @@ Partial Class Details
         Me.lbArchaelogyCata.AutoSize = True
         Me.lbArchaelogyCata.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbArchaelogyCata.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbArchaelogyCata.Location = New System.Drawing.Point(433, 104)
+        Me.lbArchaelogyCata.Location = New System.Drawing.Point(543, 104)
         Me.lbArchaelogyCata.Name = "lbArchaelogyCata"
-        Me.lbArchaelogyCata.Size = New System.Drawing.Size(85, 26)
+        Me.lbArchaelogyCata.Size = New System.Drawing.Size(104, 26)
         Me.lbArchaelogyCata.TabIndex = 31
         Me.lbArchaelogyCata.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -628,9 +630,9 @@ Partial Class Details
         Me.lbFishingCata.AutoSize = True
         Me.lbFishingCata.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbFishingCata.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbFishingCata.Location = New System.Drawing.Point(347, 104)
+        Me.lbFishingCata.Location = New System.Drawing.Point(435, 104)
         Me.lbFishingCata.Name = "lbFishingCata"
-        Me.lbFishingCata.Size = New System.Drawing.Size(80, 26)
+        Me.lbFishingCata.Size = New System.Drawing.Size(102, 26)
         Me.lbFishingCata.TabIndex = 30
         Me.lbFishingCata.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -639,9 +641,9 @@ Partial Class Details
         Me.lbCookingCata.AutoSize = True
         Me.lbCookingCata.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbCookingCata.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbCookingCata.Location = New System.Drawing.Point(261, 104)
+        Me.lbCookingCata.Location = New System.Drawing.Point(327, 104)
         Me.lbCookingCata.Name = "lbCookingCata"
-        Me.lbCookingCata.Size = New System.Drawing.Size(80, 26)
+        Me.lbCookingCata.Size = New System.Drawing.Size(102, 26)
         Me.lbCookingCata.TabIndex = 29
         Me.lbCookingCata.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -650,9 +652,9 @@ Partial Class Details
         Me.lbProf2Cata.AutoSize = True
         Me.lbProf2Cata.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbProf2Cata.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbProf2Cata.Location = New System.Drawing.Point(175, 104)
+        Me.lbProf2Cata.Location = New System.Drawing.Point(219, 104)
         Me.lbProf2Cata.Name = "lbProf2Cata"
-        Me.lbProf2Cata.Size = New System.Drawing.Size(80, 26)
+        Me.lbProf2Cata.Size = New System.Drawing.Size(102, 26)
         Me.lbProf2Cata.TabIndex = 28
         Me.lbProf2Cata.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -661,9 +663,9 @@ Partial Class Details
         Me.lbProf1Cata.AutoSize = True
         Me.lbProf1Cata.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbProf1Cata.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbProf1Cata.Location = New System.Drawing.Point(89, 104)
+        Me.lbProf1Cata.Location = New System.Drawing.Point(111, 104)
         Me.lbProf1Cata.Name = "lbProf1Cata"
-        Me.lbProf1Cata.Size = New System.Drawing.Size(80, 26)
+        Me.lbProf1Cata.Size = New System.Drawing.Size(102, 26)
         Me.lbProf1Cata.TabIndex = 27
         Me.lbProf1Cata.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -673,7 +675,7 @@ Partial Class Details
         Me.lbCataLabel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbCataLabel.Location = New System.Drawing.Point(3, 104)
         Me.lbCataLabel.Name = "lbCataLabel"
-        Me.lbCataLabel.Size = New System.Drawing.Size(80, 26)
+        Me.lbCataLabel.Size = New System.Drawing.Size(102, 26)
         Me.lbCataLabel.TabIndex = 26
         Me.lbCataLabel.Text = "Cata"
         Me.lbCataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -683,9 +685,9 @@ Partial Class Details
         Me.lbArchaelogyFT.AutoSize = True
         Me.lbArchaelogyFT.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbArchaelogyFT.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbArchaelogyFT.Location = New System.Drawing.Point(433, 78)
+        Me.lbArchaelogyFT.Location = New System.Drawing.Point(543, 78)
         Me.lbArchaelogyFT.Name = "lbArchaelogyFT"
-        Me.lbArchaelogyFT.Size = New System.Drawing.Size(85, 26)
+        Me.lbArchaelogyFT.Size = New System.Drawing.Size(104, 26)
         Me.lbArchaelogyFT.TabIndex = 25
         Me.lbArchaelogyFT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -694,9 +696,9 @@ Partial Class Details
         Me.lbFishingFT.AutoSize = True
         Me.lbFishingFT.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbFishingFT.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbFishingFT.Location = New System.Drawing.Point(347, 78)
+        Me.lbFishingFT.Location = New System.Drawing.Point(435, 78)
         Me.lbFishingFT.Name = "lbFishingFT"
-        Me.lbFishingFT.Size = New System.Drawing.Size(80, 26)
+        Me.lbFishingFT.Size = New System.Drawing.Size(102, 26)
         Me.lbFishingFT.TabIndex = 24
         Me.lbFishingFT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -705,9 +707,9 @@ Partial Class Details
         Me.lbCookingFT.AutoSize = True
         Me.lbCookingFT.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbCookingFT.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbCookingFT.Location = New System.Drawing.Point(261, 78)
+        Me.lbCookingFT.Location = New System.Drawing.Point(327, 78)
         Me.lbCookingFT.Name = "lbCookingFT"
-        Me.lbCookingFT.Size = New System.Drawing.Size(80, 26)
+        Me.lbCookingFT.Size = New System.Drawing.Size(102, 26)
         Me.lbCookingFT.TabIndex = 23
         Me.lbCookingFT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -716,9 +718,9 @@ Partial Class Details
         Me.lbProf2FT.AutoSize = True
         Me.lbProf2FT.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbProf2FT.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbProf2FT.Location = New System.Drawing.Point(175, 78)
+        Me.lbProf2FT.Location = New System.Drawing.Point(219, 78)
         Me.lbProf2FT.Name = "lbProf2FT"
-        Me.lbProf2FT.Size = New System.Drawing.Size(80, 26)
+        Me.lbProf2FT.Size = New System.Drawing.Size(102, 26)
         Me.lbProf2FT.TabIndex = 22
         Me.lbProf2FT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -727,9 +729,9 @@ Partial Class Details
         Me.lbProf1FT.AutoSize = True
         Me.lbProf1FT.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbProf1FT.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbProf1FT.Location = New System.Drawing.Point(89, 78)
+        Me.lbProf1FT.Location = New System.Drawing.Point(111, 78)
         Me.lbProf1FT.Name = "lbProf1FT"
-        Me.lbProf1FT.Size = New System.Drawing.Size(80, 26)
+        Me.lbProf1FT.Size = New System.Drawing.Size(102, 26)
         Me.lbProf1FT.TabIndex = 21
         Me.lbProf1FT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -739,7 +741,7 @@ Partial Class Details
         Me.lbFTLabel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbFTLabel.Location = New System.Drawing.Point(3, 78)
         Me.lbFTLabel.Name = "lbFTLabel"
-        Me.lbFTLabel.Size = New System.Drawing.Size(80, 26)
+        Me.lbFTLabel.Size = New System.Drawing.Size(102, 26)
         Me.lbFTLabel.TabIndex = 20
         Me.lbFTLabel.Text = "FT"
         Me.lbFTLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -749,9 +751,9 @@ Partial Class Details
         Me.lbArchaelogyBC.AutoSize = True
         Me.lbArchaelogyBC.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbArchaelogyBC.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbArchaelogyBC.Location = New System.Drawing.Point(433, 52)
+        Me.lbArchaelogyBC.Location = New System.Drawing.Point(543, 52)
         Me.lbArchaelogyBC.Name = "lbArchaelogyBC"
-        Me.lbArchaelogyBC.Size = New System.Drawing.Size(85, 26)
+        Me.lbArchaelogyBC.Size = New System.Drawing.Size(104, 26)
         Me.lbArchaelogyBC.TabIndex = 19
         Me.lbArchaelogyBC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -760,9 +762,9 @@ Partial Class Details
         Me.lbFishingBC.AutoSize = True
         Me.lbFishingBC.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbFishingBC.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbFishingBC.Location = New System.Drawing.Point(347, 52)
+        Me.lbFishingBC.Location = New System.Drawing.Point(435, 52)
         Me.lbFishingBC.Name = "lbFishingBC"
-        Me.lbFishingBC.Size = New System.Drawing.Size(80, 26)
+        Me.lbFishingBC.Size = New System.Drawing.Size(102, 26)
         Me.lbFishingBC.TabIndex = 18
         Me.lbFishingBC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -771,9 +773,9 @@ Partial Class Details
         Me.lbCookingBC.AutoSize = True
         Me.lbCookingBC.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbCookingBC.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbCookingBC.Location = New System.Drawing.Point(261, 52)
+        Me.lbCookingBC.Location = New System.Drawing.Point(327, 52)
         Me.lbCookingBC.Name = "lbCookingBC"
-        Me.lbCookingBC.Size = New System.Drawing.Size(80, 26)
+        Me.lbCookingBC.Size = New System.Drawing.Size(102, 26)
         Me.lbCookingBC.TabIndex = 17
         Me.lbCookingBC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -782,9 +784,9 @@ Partial Class Details
         Me.lbProf2BC.AutoSize = True
         Me.lbProf2BC.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbProf2BC.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbProf2BC.Location = New System.Drawing.Point(175, 52)
+        Me.lbProf2BC.Location = New System.Drawing.Point(219, 52)
         Me.lbProf2BC.Name = "lbProf2BC"
-        Me.lbProf2BC.Size = New System.Drawing.Size(80, 26)
+        Me.lbProf2BC.Size = New System.Drawing.Size(102, 26)
         Me.lbProf2BC.TabIndex = 16
         Me.lbProf2BC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -793,9 +795,9 @@ Partial Class Details
         Me.lbProf1BC.AutoSize = True
         Me.lbProf1BC.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbProf1BC.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbProf1BC.Location = New System.Drawing.Point(89, 52)
+        Me.lbProf1BC.Location = New System.Drawing.Point(111, 52)
         Me.lbProf1BC.Name = "lbProf1BC"
-        Me.lbProf1BC.Size = New System.Drawing.Size(80, 26)
+        Me.lbProf1BC.Size = New System.Drawing.Size(102, 26)
         Me.lbProf1BC.TabIndex = 15
         Me.lbProf1BC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -805,21 +807,10 @@ Partial Class Details
         Me.lbBCLabel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbBCLabel.Location = New System.Drawing.Point(3, 52)
         Me.lbBCLabel.Name = "lbBCLabel"
-        Me.lbBCLabel.Size = New System.Drawing.Size(80, 26)
+        Me.lbBCLabel.Size = New System.Drawing.Size(102, 26)
         Me.lbBCLabel.TabIndex = 14
         Me.lbBCLabel.Text = "BC"
         Me.lbBCLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(80, 26)
-        Me.Label1.TabIndex = 13
-        Me.Label1.Text = "Vanilla"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lbVanillaLabel
         '
@@ -827,7 +818,7 @@ Partial Class Details
         Me.lbVanillaLabel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbVanillaLabel.Location = New System.Drawing.Point(3, 26)
         Me.lbVanillaLabel.Name = "lbVanillaLabel"
-        Me.lbVanillaLabel.Size = New System.Drawing.Size(80, 26)
+        Me.lbVanillaLabel.Size = New System.Drawing.Size(102, 26)
         Me.lbVanillaLabel.TabIndex = 12
         Me.lbVanillaLabel.Text = "Vanilla"
         Me.lbVanillaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -836,9 +827,9 @@ Partial Class Details
         '
         Me.Label5.AutoSize = True
         Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label5.Location = New System.Drawing.Point(433, 0)
+        Me.Label5.Location = New System.Drawing.Point(543, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(85, 26)
+        Me.Label5.Size = New System.Drawing.Size(104, 26)
         Me.Label5.TabIndex = 5
         Me.Label5.Text = "Archaelogy"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -847,31 +838,31 @@ Partial Class Details
         '
         Me.Label4.AutoSize = True
         Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label4.Location = New System.Drawing.Point(347, 0)
+        Me.Label4.Location = New System.Drawing.Point(435, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(80, 26)
+        Me.Label4.Size = New System.Drawing.Size(102, 26)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Fishing"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label3
+        'lblCookingLabel
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label3.Location = New System.Drawing.Point(261, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(80, 26)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Cooking"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblCookingLabel.AutoSize = True
+        Me.lblCookingLabel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lblCookingLabel.Location = New System.Drawing.Point(327, 0)
+        Me.lblCookingLabel.Name = "lblCookingLabel"
+        Me.lblCookingLabel.Size = New System.Drawing.Size(102, 26)
+        Me.lblCookingLabel.TabIndex = 3
+        Me.lblCookingLabel.Text = "Cooking"
+        Me.lblCookingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lbProf2Name
         '
         Me.lbProf2Name.AutoSize = True
         Me.lbProf2Name.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lbProf2Name.Location = New System.Drawing.Point(175, 0)
+        Me.lbProf2Name.Location = New System.Drawing.Point(219, 0)
         Me.lbProf2Name.Name = "lbProf2Name"
-        Me.lbProf2Name.Size = New System.Drawing.Size(80, 26)
+        Me.lbProf2Name.Size = New System.Drawing.Size(102, 26)
         Me.lbProf2Name.TabIndex = 2
         Me.lbProf2Name.Text = "Prof2"
         Me.lbProf2Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -880,9 +871,9 @@ Partial Class Details
         '
         Me.lbProf1Name.AutoSize = True
         Me.lbProf1Name.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lbProf1Name.Location = New System.Drawing.Point(89, 0)
+        Me.lbProf1Name.Location = New System.Drawing.Point(111, 0)
         Me.lbProf1Name.Name = "lbProf1Name"
-        Me.lbProf1Name.Size = New System.Drawing.Size(80, 26)
+        Me.lbProf1Name.Size = New System.Drawing.Size(102, 26)
         Me.lbProf1Name.TabIndex = 0
         Me.lbProf1Name.Text = "Prof1"
         Me.lbProf1Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -892,9 +883,9 @@ Partial Class Details
         Me.lbProf1Vanilla.AutoSize = True
         Me.lbProf1Vanilla.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbProf1Vanilla.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbProf1Vanilla.Location = New System.Drawing.Point(89, 26)
+        Me.lbProf1Vanilla.Location = New System.Drawing.Point(111, 26)
         Me.lbProf1Vanilla.Name = "lbProf1Vanilla"
-        Me.lbProf1Vanilla.Size = New System.Drawing.Size(80, 26)
+        Me.lbProf1Vanilla.Size = New System.Drawing.Size(102, 26)
         Me.lbProf1Vanilla.TabIndex = 6
         Me.lbProf1Vanilla.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -903,9 +894,9 @@ Partial Class Details
         Me.lbProf2Vanilla.AutoSize = True
         Me.lbProf2Vanilla.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbProf2Vanilla.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbProf2Vanilla.Location = New System.Drawing.Point(175, 26)
+        Me.lbProf2Vanilla.Location = New System.Drawing.Point(219, 26)
         Me.lbProf2Vanilla.Name = "lbProf2Vanilla"
-        Me.lbProf2Vanilla.Size = New System.Drawing.Size(80, 26)
+        Me.lbProf2Vanilla.Size = New System.Drawing.Size(102, 26)
         Me.lbProf2Vanilla.TabIndex = 7
         Me.lbProf2Vanilla.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -914,9 +905,9 @@ Partial Class Details
         Me.lbCookingVanilla.AutoSize = True
         Me.lbCookingVanilla.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbCookingVanilla.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbCookingVanilla.Location = New System.Drawing.Point(261, 26)
+        Me.lbCookingVanilla.Location = New System.Drawing.Point(327, 26)
         Me.lbCookingVanilla.Name = "lbCookingVanilla"
-        Me.lbCookingVanilla.Size = New System.Drawing.Size(80, 26)
+        Me.lbCookingVanilla.Size = New System.Drawing.Size(102, 26)
         Me.lbCookingVanilla.TabIndex = 8
         Me.lbCookingVanilla.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -925,9 +916,9 @@ Partial Class Details
         Me.lbFishingVanilla.AutoSize = True
         Me.lbFishingVanilla.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbFishingVanilla.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbFishingVanilla.Location = New System.Drawing.Point(347, 26)
+        Me.lbFishingVanilla.Location = New System.Drawing.Point(435, 26)
         Me.lbFishingVanilla.Name = "lbFishingVanilla"
-        Me.lbFishingVanilla.Size = New System.Drawing.Size(80, 26)
+        Me.lbFishingVanilla.Size = New System.Drawing.Size(102, 26)
         Me.lbFishingVanilla.TabIndex = 9
         Me.lbFishingVanilla.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -936,9 +927,9 @@ Partial Class Details
         Me.lbArchaelogyVanilla.AutoSize = True
         Me.lbArchaelogyVanilla.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbArchaelogyVanilla.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbArchaelogyVanilla.Location = New System.Drawing.Point(433, 26)
+        Me.lbArchaelogyVanilla.Location = New System.Drawing.Point(543, 26)
         Me.lbArchaelogyVanilla.Name = "lbArchaelogyVanilla"
-        Me.lbArchaelogyVanilla.Size = New System.Drawing.Size(85, 26)
+        Me.lbArchaelogyVanilla.Size = New System.Drawing.Size(104, 26)
         Me.lbArchaelogyVanilla.TabIndex = 10
         Me.lbArchaelogyVanilla.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -947,64 +938,42 @@ Partial Class Details
         Me.tlpNameMain.ColumnCount = 2
         Me.tlpNameMain.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.99751!))
         Me.tlpNameMain.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.00249!))
-        Me.tlpNameMain.Controls.Add(Me.tlpNameLeft, 0, 0)
+        Me.tlpNameMain.Controls.Add(Me.tlpNameLeft2, 1, 0)
+        Me.tlpNameMain.Controls.Add(Me.TableLayoutPanel1, 0, 0)
         Me.tlpNameMain.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tlpNameMain.Location = New System.Drawing.Point(0, 0)
         Me.tlpNameMain.Margin = New System.Windows.Forms.Padding(0)
         Me.tlpNameMain.Name = "tlpNameMain"
         Me.tlpNameMain.RowCount = 1
         Me.tlpNameMain.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tlpNameMain.Size = New System.Drawing.Size(520, 283)
+        Me.tlpNameMain.Size = New System.Drawing.Size(391, 283)
         Me.tlpNameMain.TabIndex = 1
         '
-        'tlpNameLeft
+        'tlpNameLeft2
         '
-        Me.tlpNameLeft.ColumnCount = 1
-        Me.tlpNameLeft.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tlpNameLeft.Controls.Add(Me.lbName, 0, 0)
-        Me.tlpNameLeft.Controls.Add(Me.lbRealm, 0, 1)
-        Me.tlpNameLeft.Controls.Add(Me.lbItemLevel, 0, 4)
-        Me.tlpNameLeft.Controls.Add(Me.lbLevel, 0, 3)
-        Me.tlpNameLeft.Controls.Add(Me.lbClass, 0, 2)
-        Me.tlpNameLeft.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tlpNameLeft.Location = New System.Drawing.Point(0, 0)
-        Me.tlpNameLeft.Margin = New System.Windows.Forms.Padding(0)
-        Me.tlpNameLeft.Name = "tlpNameLeft"
-        Me.tlpNameLeft.RowCount = 8
-        Me.tlpNameLeft.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tlpNameLeft.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
-        Me.tlpNameLeft.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
-        Me.tlpNameLeft.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
-        Me.tlpNameLeft.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
-        Me.tlpNameLeft.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
-        Me.tlpNameLeft.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
-        Me.tlpNameLeft.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
-        Me.tlpNameLeft.Size = New System.Drawing.Size(259, 283)
-        Me.tlpNameLeft.TabIndex = 0
-        '
-        'lbName
-        '
-        Me.lbName.AutoSize = True
-        Me.lbName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lbName.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbName.Location = New System.Drawing.Point(3, 0)
-        Me.lbName.Name = "lbName"
-        Me.lbName.Size = New System.Drawing.Size(253, 40)
-        Me.lbName.TabIndex = 7
-        Me.lbName.Text = "Testname"
-        Me.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lbRealm
-        '
-        Me.lbRealm.AutoSize = True
-        Me.lbRealm.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lbRealm.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbRealm.Location = New System.Drawing.Point(3, 40)
-        Me.lbRealm.Name = "lbRealm"
-        Me.lbRealm.Size = New System.Drawing.Size(253, 34)
-        Me.lbRealm.TabIndex = 8
-        Me.lbRealm.Text = "Testrealm"
-        Me.lbRealm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.tlpNameLeft2.ColumnCount = 1
+        Me.tlpNameLeft2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.tlpNameLeft2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.tlpNameLeft2.Controls.Add(Me.lbItemLevel, 0, 4)
+        Me.tlpNameLeft2.Controls.Add(Me.lbRealm, 0, 1)
+        Me.tlpNameLeft2.Controls.Add(Me.lbLevel, 0, 3)
+        Me.tlpNameLeft2.Controls.Add(Me.lbName, 0, 0)
+        Me.tlpNameLeft2.Controls.Add(Me.lbClass, 0, 2)
+        Me.tlpNameLeft2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tlpNameLeft2.Location = New System.Drawing.Point(195, 0)
+        Me.tlpNameLeft2.Margin = New System.Windows.Forms.Padding(0)
+        Me.tlpNameLeft2.Name = "tlpNameLeft2"
+        Me.tlpNameLeft2.RowCount = 8
+        Me.tlpNameLeft2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tlpNameLeft2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.tlpNameLeft2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.tlpNameLeft2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.tlpNameLeft2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.tlpNameLeft2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.tlpNameLeft2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.tlpNameLeft2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.tlpNameLeft2.Size = New System.Drawing.Size(196, 283)
+        Me.tlpNameLeft2.TabIndex = 1
         '
         'lbItemLevel
         '
@@ -1014,10 +983,22 @@ Partial Class Details
         Me.lbItemLevel.Location = New System.Drawing.Point(2, 142)
         Me.lbItemLevel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbItemLevel.Name = "lbItemLevel"
-        Me.lbItemLevel.Size = New System.Drawing.Size(255, 34)
+        Me.lbItemLevel.Size = New System.Drawing.Size(192, 34)
         Me.lbItemLevel.TabIndex = 10
         Me.lbItemLevel.Text = "333"
         Me.lbItemLevel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbRealm
+        '
+        Me.lbRealm.AutoSize = True
+        Me.lbRealm.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbRealm.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbRealm.Location = New System.Drawing.Point(3, 40)
+        Me.lbRealm.Name = "lbRealm"
+        Me.lbRealm.Size = New System.Drawing.Size(190, 34)
+        Me.lbRealm.TabIndex = 8
+        Me.lbRealm.Text = "Testrealm"
+        Me.lbRealm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lbLevel
         '
@@ -1027,10 +1008,22 @@ Partial Class Details
         Me.lbLevel.Location = New System.Drawing.Point(2, 108)
         Me.lbLevel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbLevel.Name = "lbLevel"
-        Me.lbLevel.Size = New System.Drawing.Size(255, 34)
+        Me.lbLevel.Size = New System.Drawing.Size(192, 34)
         Me.lbLevel.TabIndex = 9
         Me.lbLevel.Text = "100"
         Me.lbLevel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbName
+        '
+        Me.lbName.AutoSize = True
+        Me.lbName.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbName.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbName.Location = New System.Drawing.Point(3, 0)
+        Me.lbName.Name = "lbName"
+        Me.lbName.Size = New System.Drawing.Size(190, 40)
+        Me.lbName.TabIndex = 7
+        Me.lbName.Text = "Testname"
+        Me.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lbClass
         '
@@ -1040,10 +1033,22 @@ Partial Class Details
         Me.lbClass.Location = New System.Drawing.Point(2, 74)
         Me.lbClass.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbClass.Name = "lbClass"
-        Me.lbClass.Size = New System.Drawing.Size(255, 34)
+        Me.lbClass.Size = New System.Drawing.Size(192, 34)
         Me.lbClass.TabIndex = 11
         Me.lbClass.Text = "Testclass"
         Me.lbClass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'pbPic
+        '
+        Me.pbPic.BackColor = System.Drawing.SystemColors.Control
+        Me.pbPic.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pbPic.Location = New System.Drawing.Point(23, 61)
+        Me.pbPic.Margin = New System.Windows.Forms.Padding(1)
+        Me.pbPic.Name = "pbPic"
+        Me.pbPic.Size = New System.Drawing.Size(148, 161)
+        Me.pbPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.pbPic.TabIndex = 2
+        Me.pbPic.TabStop = False
         '
         'tlpNotesMain
         '
@@ -1052,13 +1057,13 @@ Partial Class Details
         Me.tlpNotesMain.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.tlpNotesMain.Controls.Add(Me.tlpBagNotes, 0, 0)
         Me.tlpNotesMain.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tlpNotesMain.Location = New System.Drawing.Point(520, 283)
+        Me.tlpNotesMain.Location = New System.Drawing.Point(391, 283)
         Me.tlpNotesMain.Margin = New System.Windows.Forms.Padding(0)
         Me.tlpNotesMain.Name = "tlpNotesMain"
         Me.tlpNotesMain.RowCount = 2
         Me.tlpNotesMain.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.tlpNotesMain.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tlpNotesMain.Size = New System.Drawing.Size(521, 283)
+        Me.tlpNotesMain.Size = New System.Drawing.Size(650, 283)
         Me.tlpNotesMain.TabIndex = 2
         '
         'tlpBagNotes
@@ -1074,7 +1079,7 @@ Partial Class Details
         Me.tlpBagNotes.RowCount = 1
         Me.tlpBagNotes.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tlpBagNotes.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 141.0!))
-        Me.tlpBagNotes.Size = New System.Drawing.Size(260, 141)
+        Me.tlpBagNotes.Size = New System.Drawing.Size(325, 141)
         Me.tlpBagNotes.TabIndex = 0
         '
         'lbBagNotes
@@ -1083,9 +1088,27 @@ Partial Class Details
         Me.lbBagNotes.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbBagNotes.Location = New System.Drawing.Point(3, 0)
         Me.lbBagNotes.Name = "lbBagNotes"
-        Me.lbBagNotes.Size = New System.Drawing.Size(254, 141)
+        Me.lbBagNotes.Size = New System.Drawing.Size(319, 141)
         Me.lbBagNotes.TabIndex = 0
         Me.lbBagNotes.Text = "Bag notes"
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.ColumnCount = 3
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.pbPic, 1, 1)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(0)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 3
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(195, 283)
+        Me.TableLayoutPanel1.TabIndex = 2
         '
         'Details
         '
@@ -1106,11 +1129,13 @@ Partial Class Details
         Me.tlpProfMid.ResumeLayout(False)
         Me.tlpProfMid.PerformLayout()
         Me.tlpNameMain.ResumeLayout(False)
-        Me.tlpNameLeft.ResumeLayout(False)
-        Me.tlpNameLeft.PerformLayout()
+        Me.tlpNameLeft2.ResumeLayout(False)
+        Me.tlpNameLeft2.PerformLayout()
+        CType(Me.pbPic, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tlpNotesMain.ResumeLayout(False)
         Me.tlpBagNotes.ResumeLayout(False)
         Me.tlpBagNotes.PerformLayout()
+        Me.TableLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1129,7 +1154,7 @@ Partial Class Details
     Friend WithEvents cmdNext As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lblCookingLabel As Label
     Friend WithEvents lbProf2Name As Label
     Friend WithEvents lbProf1Name As Label
     Friend WithEvents lbArchaelogyAzeroth As Label
@@ -1174,14 +1199,12 @@ Partial Class Details
     Friend WithEvents lbProf2BC As Label
     Friend WithEvents lbProf1BC As Label
     Friend WithEvents lbBCLabel As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents lbVanillaLabel As Label
     Friend WithEvents lbProf1Vanilla As Label
     Friend WithEvents lbProf2Vanilla As Label
     Friend WithEvents lbCookingVanilla As Label
     Friend WithEvents lbFishingVanilla As Label
     Friend WithEvents lbArchaelogyVanilla As Label
-    Friend WithEvents tlpNameLeft As TableLayoutPanel
     Friend WithEvents lbName As Label
     Friend WithEvents lbRealm As Label
     Friend WithEvents lbLevel As Label
@@ -1190,4 +1213,7 @@ Partial Class Details
     Friend WithEvents tlpNotesMain As TableLayoutPanel
     Friend WithEvents tlpBagNotes As TableLayoutPanel
     Friend WithEvents lbBagNotes As Label
+    Friend WithEvents tlpNameLeft2 As TableLayoutPanel
+    Friend WithEvents pbPic As PictureBox
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
 End Class

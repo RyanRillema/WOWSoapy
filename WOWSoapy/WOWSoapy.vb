@@ -4,6 +4,7 @@
     Private Sub WOWSoapy_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SoapyData = New SoapyData(Me)
         SoapyData.TrdWowSoapy.StartThread()
+        LblVersion.Text = SoapyData.SoapyConst.GetVersion
     End Sub
 
     Private Sub CmdGetData_Click(sender As Object, e As EventArgs) Handles cmdGetData.Click

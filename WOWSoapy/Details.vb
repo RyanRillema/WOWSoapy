@@ -34,8 +34,10 @@
         lbName.Text = CurrChar.Name
         lbRealm.Text = CurrChar.Realm
         lbClass.Text = oSoapyData.SoapyIO.GetClassName(CurrChar.CharClass)
+        SetLabelColourByClass(lbClass, oSoapyData.SoapyIO.GetClassName(CurrChar.CharClass))
         lbLevel.Text = CurrChar.Level
         lbItemLevel.Text = ""
+        pbPic.ImageLocation = oSoapyData.SoapyIO.getImagePath(CurrChar)
     End Sub
 
     Private Sub RefreshNotes()
@@ -107,22 +109,39 @@
             SetLabelColourByValue(lbProf2Azeroth, 150)
 
             lbCookingVanilla.Text = CurrChar.getSecondaryProfession(CurrChar, "", "Cooking").Rank
+            SetLabelColourByValue(lbCookingVanilla, 300)
             lbFishingVanilla.Text = CurrChar.getSecondaryProfession(CurrChar, "", "Fishing").Rank
+            SetLabelColourByValue(lbFishingVanilla, 300)
             lbCookingBC.Text = CurrChar.getSecondaryProfession(CurrChar, "Outland", "Cooking").Rank
+            SetLabelColourByValue(lbCookingBC, 75)
             lbFishingBC.Text = CurrChar.getSecondaryProfession(CurrChar, "Outland", "Fishing").Rank
+            SetLabelColourByValue(lbFishingBC, 75)
             lbCookingFT.Text = CurrChar.getSecondaryProfession(CurrChar, "Northrend", "Cooking").Rank
+            SetLabelColourByValue(lbCookingFT, 75)
             lbFishingFT.Text = CurrChar.getSecondaryProfession(CurrChar, "Northrend", "Fishing").Rank
+            SetLabelColourByValue(lbFishingFT, 75)
             lbCookingCata.Text = CurrChar.getSecondaryProfession(CurrChar, "Cataclysm", "Cooking").Rank
+            SetLabelColourByValue(lbCookingCata, 75)
             lbFishingCata.Text = CurrChar.getSecondaryProfession(CurrChar, "Cataclysm", "Fishing").Rank
+            SetLabelColourByValue(lbFishingCata, 75)
             lbCookingPanda.Text = CurrChar.getSecondaryProfession(CurrChar, "Pandaria", "Cooking").Rank
+            SetLabelColourByValue(lbCookingPanda, 75)
             lbFishingPanda.Text = CurrChar.getSecondaryProfession(CurrChar, "Pandaria", "Fishing").Rank
+            SetLabelColourByValue(lbFishingPanda, 75)
             lbCookingDraenor.Text = CurrChar.getSecondaryProfession(CurrChar, "Draenor", "Cooking").Rank
+            SetLabelColourByValue(lbCookingDraenor, 100)
             lbFishingDraenor.Text = CurrChar.getSecondaryProfession(CurrChar, "Draenor", "Fishing").Rank
+            SetLabelColourByValue(lbFishingDraenor, 100)
             lbCookingLegion.Text = CurrChar.getSecondaryProfession(CurrChar, "Legion", "Cooking").Rank
+            SetLabelColourByValue(lbCookingLegion, 100)
             lbFishingLegion.Text = CurrChar.getSecondaryProfession(CurrChar, "Legion", "Fishing").Rank
+            SetLabelColourByValue(lbFishingLegion, 100)
             lbCookingAzeroth.Text = CurrChar.getSecondaryProfession(CurrChar, "Kul Tiran", "Cooking").Rank
+            SetLabelColourByValue(lbCookingAzeroth, 150)
             lbFishingAzeroth.Text = CurrChar.getSecondaryProfession(CurrChar, "Kul Tiran", "Fishing").Rank
+            SetLabelColourByValue(lbFishingAzeroth, 150)
             lbArchaelogyVanilla.Text = CurrChar.getSecondaryProfession(CurrChar, "", "Archaeology").Rank
+            SetLabelColourByValue(lbArchaelogyVanilla, 950)
 
         Catch
         End Try
@@ -159,6 +178,39 @@
             Case Else
                 oLblLabel.ForeColor = Color.Black
 
+        End Select
+
+    End Sub
+
+    Private Sub SetLabelColourByClass(ByRef oLblLabel As Label, sClass As String)
+
+        Select Case sClass
+            Case "Death Knight"
+                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassDeathKnight
+            Case "Demon Hunter"
+                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassDemonHunter
+            Case "Druid"
+                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassDruid
+            Case "Hunter"
+                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassHunter
+            Case "Mage"
+                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassMage
+            Case "Monk"
+                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassMonk
+            Case "Paladin"
+                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassPaladin
+            Case "Priest"
+                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassPriest
+            Case "Rogue"
+                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassRogue
+            Case "Shaman"
+                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassShaman
+            Case "Warlock"
+                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassWarlock
+            Case "Warrior"
+                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassWarrior
+            Case Else
+                oLblLabel.ForeColor = Color.Black
         End Select
 
     End Sub

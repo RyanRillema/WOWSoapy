@@ -312,6 +312,15 @@ Public Class SoapyIO
         OutputStream.Close()
     End Sub
 
+    'Images
+    Public Function getImagePath(CharDetails As CharDetails) As String
+        Dim sPath As String
+
+        sPath = "http://render-eu.worldofwarcraft.com/character/" & CharDetails.Thumbnail
+
+        Return sPath
+    End Function
+
     'Char notes
     Private Sub GetCharNotes(ByRef CharDetails As CharDetails)
         GetCharBagNotes(CharDetails)
