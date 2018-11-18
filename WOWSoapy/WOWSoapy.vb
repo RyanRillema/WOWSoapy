@@ -56,7 +56,7 @@
 
         lbChars.Items.Clear()
 
-        For iCharLoop = 1 To SoapyData.CharCount
+        For iCharLoop = 1 To SoapyData.AttemptedCharCount
 
             If Not IsNothing(SoapyData.Chars(iCharLoop)) Then
 

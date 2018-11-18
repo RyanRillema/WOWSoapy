@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CharDetails.vb" />
+    <Compile Include="CharFilter.vb" />
     <Compile Include="CharNames.vb" />
     <Compile Include="ClassDetails.vb" />
     <Compile Include="Details.Designer.vb">

@@ -37,8 +37,8 @@ Partial Class WOWSoapy
         Me.LblGetData = New System.Windows.Forms.Label()
         Me.cmdRefresh = New System.Windows.Forms.Button()
         Me.cmdOverview = New System.Windows.Forms.Button()
-        Me.lbOutput = New System.Windows.Forms.ListBox()
         Me.cmdDetails = New System.Windows.Forms.Button()
+        Me.lbOutput = New System.Windows.Forms.ListBox()
         Me.TlpLeft.SuspendLayout()
         Me.TlpAbout.SuspendLayout()
         Me.tlpCharMain.SuspendLayout()
@@ -93,10 +93,11 @@ Partial Class WOWSoapy
         '
         'tlpCharMain
         '
-        Me.tlpCharMain.ColumnCount = 2
+        Me.tlpCharMain.ColumnCount = 3
         Me.tlpCharMain.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.tlpCharMain.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 250.0!))
         Me.tlpCharMain.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140.0!))
-        Me.tlpCharMain.Controls.Add(Me.lbChars, 1, 0)
+        Me.tlpCharMain.Controls.Add(Me.lbChars, 2, 0)
         Me.tlpCharMain.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tlpCharMain.Location = New System.Drawing.Point(0, 0)
         Me.tlpCharMain.Margin = New System.Windows.Forms.Padding(0)
@@ -257,16 +258,6 @@ Partial Class WOWSoapy
         Me.cmdOverview.Text = "Overview"
         Me.cmdOverview.UseVisualStyleBackColor = True
         '
-        'lbOutput
-        '
-        Me.lbOutput.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lbOutput.FormattingEnabled = True
-        Me.lbOutput.ItemHeight = 16
-        Me.lbOutput.Location = New System.Drawing.Point(3, 3)
-        Me.lbOutput.Name = "lbOutput"
-        Me.lbOutput.Size = New System.Drawing.Size(194, 94)
-        Me.lbOutput.TabIndex = 3
-        '
         'cmdDetails
         '
         Me.cmdDetails.Dock = System.Windows.Forms.DockStyle.Fill
@@ -277,6 +268,16 @@ Partial Class WOWSoapy
         Me.cmdDetails.TabIndex = 7
         Me.cmdDetails.Text = "Details"
         Me.cmdDetails.UseVisualStyleBackColor = True
+        '
+        'lbOutput
+        '
+        Me.lbOutput.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbOutput.FormattingEnabled = True
+        Me.lbOutput.ItemHeight = 16
+        Me.lbOutput.Location = New System.Drawing.Point(3, 3)
+        Me.lbOutput.Name = "lbOutput"
+        Me.lbOutput.Size = New System.Drawing.Size(194, 94)
+        Me.lbOutput.TabIndex = 3
         '
         'WOWSoapy
         '

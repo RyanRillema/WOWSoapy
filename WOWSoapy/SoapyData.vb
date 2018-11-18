@@ -8,13 +8,14 @@
     Public TrdWowSoapy As TrdWowSoapy
 
     Public CharCount As Integer
+    Public AttemptedCharCount As Integer
     Public Chars(50) As CharDetails
     Public Races As Races
     Public Classes As Classes
 
     Public Sub New(SetFrmWowSoapy As WOWSoapy)
         FrmWowSoapy = SetFrmWowSoapy
-        FrmOverview = New OverView
+        FrmOverview = New OverView(Me)
         FrmDetails = New Details(Me)
         FrmOverview.HideForm()
         SoapyIO = New SoapyIO(Me)

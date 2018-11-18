@@ -98,6 +98,7 @@ Partial Class Details
         Me.tlpBagNotes = New System.Windows.Forms.TableLayoutPanel()
         Me.lbBagNotes = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.lbCount = New System.Windows.Forms.Label()
         Me.tlpMain.SuspendLayout()
         Me.tlpControlsMain.SuspendLayout()
         Me.tlpControlsRight.SuspendLayout()
@@ -157,6 +158,7 @@ Partial Class Details
         Me.tlpControlsRight.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
         Me.tlpControlsRight.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
         Me.tlpControlsRight.Controls.Add(Me.cmdClose, 5, 0)
+        Me.tlpControlsRight.Controls.Add(Me.lbCount, 0, 0)
         Me.tlpControlsRight.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tlpControlsRight.Location = New System.Drawing.Point(520, 0)
         Me.tlpControlsRight.Margin = New System.Windows.Forms.Padding(0)
@@ -1110,6 +1112,19 @@ Partial Class Details
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(195, 283)
         Me.TableLayoutPanel1.TabIndex = 2
         '
+        'lbCount
+        '
+        Me.lbCount.AutoSize = True
+        Me.lbCount.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbCount.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbCount.Location = New System.Drawing.Point(2, 2)
+        Me.lbCount.Margin = New System.Windows.Forms.Padding(2)
+        Me.lbCount.Name = "lbCount"
+        Me.lbCount.Size = New System.Drawing.Size(82, 26)
+        Me.lbCount.TabIndex = 1
+        Me.lbCount.Text = "0/50"
+        Me.lbCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Details
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -1122,6 +1137,7 @@ Partial Class Details
         Me.tlpMain.ResumeLayout(False)
         Me.tlpControlsMain.ResumeLayout(False)
         Me.tlpControlsRight.ResumeLayout(False)
+        Me.tlpControlsRight.PerformLayout()
         Me.tlpControlsLeft.ResumeLayout(False)
         Me.tlpFull.ResumeLayout(False)
         Me.tlpDetailsMain.ResumeLayout(False)
@@ -1216,4 +1232,5 @@ Partial Class Details
     Friend WithEvents tlpNameLeft2 As TableLayoutPanel
     Friend WithEvents pbPic As PictureBox
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents lbCount As Label
 End Class

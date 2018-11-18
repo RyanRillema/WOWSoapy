@@ -2,6 +2,7 @@
     Dim CurrPos As Integer
     Dim CurrChar As CharDetails
     Dim oSoapyData As SoapyData
+    Dim oCharFilter As CharFilter
 
     Public Sub New(oSetSoapyData As SoapyData)
 
@@ -10,6 +11,9 @@
 
         ' Add any initialization after the InitializeComponent() call.
         oSoapyData = oSetSoapyData
+        oCharFilter = New CharFilter
+
+        oCharFilter.iMinLevel = 101
 
     End Sub
 
@@ -34,10 +38,11 @@
         lbName.Text = CurrChar.Name
         lbRealm.Text = CurrChar.Realm
         lbClass.Text = oSoapyData.SoapyIO.GetClassName(CurrChar.CharClass)
-        SetLabelColourByClass(lbClass, oSoapyData.SoapyIO.GetClassName(CurrChar.CharClass))
+        oSoapyData.SoapyConst.SetLabelColourByClass(lbClass, oSoapyData.SoapyIO.GetClassName(CurrChar.CharClass))
         lbLevel.Text = CurrChar.Level
         lbItemLevel.Text = ""
         pbPic.ImageLocation = oSoapyData.SoapyIO.getImagePath(CurrChar)
+        lbCount.Text = oSoapyData.CharCount & " / " & oSoapyData.AttemptedCharCount
     End Sub
 
     Private Sub RefreshNotes()
@@ -72,147 +77,100 @@
 
             'Headings
             lbProf1Name.Text = NameA
-            SetLabelColour(lbProf1Name)
+            oSoapyData.SoapyConst.SetLabelColour(lbProf1Name)
             lbProf2Name.Text = NameB
 
             lbProf1Vanilla.Text = CurrChar.getPrimaryProfession(CurrChar, "", NameA).Rank
-            SetLabelColourByValue(lbProf1Vanilla, 300)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbProf1Vanilla, 300)
             lbProf2Vanilla.Text = CurrChar.getPrimaryProfession(CurrChar, "", NameB).Rank
-            SetLabelColourByValue(lbProf2Vanilla, 300)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbProf2Vanilla, 300)
             lbProf1BC.Text = CurrChar.getPrimaryProfession(CurrChar, "Outland", NameA).Rank
-            SetLabelColourByValue(lbProf1BC, 75)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbProf1BC, 75)
             lbProf2BC.Text = CurrChar.getPrimaryProfession(CurrChar, "Outland", NameB).Rank
-            SetLabelColourByValue(lbProf2BC, 75)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbProf2BC, 75)
             lbProf1FT.Text = CurrChar.getPrimaryProfession(CurrChar, "Northrend", NameA).Rank
-            SetLabelColourByValue(lbProf1FT, 75)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbProf1FT, 75)
             lbProf2FT.Text = CurrChar.getPrimaryProfession(CurrChar, "Northrend", NameB).Rank
-            SetLabelColourByValue(lbProf2FT, 75)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbProf2FT, 75)
             lbProf1Cata.Text = CurrChar.getPrimaryProfession(CurrChar, "Cataclysm", NameA).Rank
-            SetLabelColourByValue(lbProf1Cata, 75)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbProf1Cata, 75)
             lbProf2Cata.Text = CurrChar.getPrimaryProfession(CurrChar, "Cataclysm", NameB).Rank
-            SetLabelColourByValue(lbProf2Cata, 75)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbProf2Cata, 75)
             lbProf1Panda.Text = CurrChar.getPrimaryProfession(CurrChar, "Pandaria", NameA).Rank
-            SetLabelColourByValue(lbProf1Panda, 75)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbProf1Panda, 75)
             lbProf2Panda.Text = CurrChar.getPrimaryProfession(CurrChar, "Pandaria", NameB).Rank
-            SetLabelColourByValue(lbProf2Panda, 75)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbProf2Panda, 75)
             lbProf1Draenor.Text = CurrChar.getPrimaryProfession(CurrChar, "Draenor", NameA).Rank
-            SetLabelColourByValue(lbProf1Draenor, 100)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbProf1Draenor, 100)
             lbProf2Draenor.Text = CurrChar.getPrimaryProfession(CurrChar, "Draenor", NameB).Rank
-            SetLabelColourByValue(lbProf2Draenor, 100)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbProf2Draenor, 100)
             lbProf1Legion.Text = CurrChar.getPrimaryProfession(CurrChar, "Legion", NameA).Rank
-            SetLabelColourByValue(lbProf1Legion, 100)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbProf1Legion, 100)
             lbProf2Legion.Text = CurrChar.getPrimaryProfession(CurrChar, "Legion", NameB).Rank
-            SetLabelColourByValue(lbProf2Legion, 100)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbProf2Legion, 100)
             lbProf1Azeroth.Text = CurrChar.getPrimaryProfession(CurrChar, "Kul Tiran", NameA).Rank
-            SetLabelColourByValue(lbProf1Azeroth, 150)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbProf1Azeroth, 150)
             lbProf2Azeroth.Text = CurrChar.getPrimaryProfession(CurrChar, "Kul Tiran", NameB).Rank
-            SetLabelColourByValue(lbProf2Azeroth, 150)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbProf2Azeroth, 150)
 
             lbCookingVanilla.Text = CurrChar.getSecondaryProfession(CurrChar, "", "Cooking").Rank
-            SetLabelColourByValue(lbCookingVanilla, 300)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbCookingVanilla, 300)
             lbFishingVanilla.Text = CurrChar.getSecondaryProfession(CurrChar, "", "Fishing").Rank
-            SetLabelColourByValue(lbFishingVanilla, 300)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbFishingVanilla, 300)
             lbCookingBC.Text = CurrChar.getSecondaryProfession(CurrChar, "Outland", "Cooking").Rank
-            SetLabelColourByValue(lbCookingBC, 75)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbCookingBC, 75)
             lbFishingBC.Text = CurrChar.getSecondaryProfession(CurrChar, "Outland", "Fishing").Rank
-            SetLabelColourByValue(lbFishingBC, 75)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbFishingBC, 75)
             lbCookingFT.Text = CurrChar.getSecondaryProfession(CurrChar, "Northrend", "Cooking").Rank
-            SetLabelColourByValue(lbCookingFT, 75)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbCookingFT, 75)
             lbFishingFT.Text = CurrChar.getSecondaryProfession(CurrChar, "Northrend", "Fishing").Rank
-            SetLabelColourByValue(lbFishingFT, 75)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbFishingFT, 75)
             lbCookingCata.Text = CurrChar.getSecondaryProfession(CurrChar, "Cataclysm", "Cooking").Rank
-            SetLabelColourByValue(lbCookingCata, 75)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbCookingCata, 75)
             lbFishingCata.Text = CurrChar.getSecondaryProfession(CurrChar, "Cataclysm", "Fishing").Rank
-            SetLabelColourByValue(lbFishingCata, 75)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbFishingCata, 75)
             lbCookingPanda.Text = CurrChar.getSecondaryProfession(CurrChar, "Pandaria", "Cooking").Rank
-            SetLabelColourByValue(lbCookingPanda, 75)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbCookingPanda, 75)
             lbFishingPanda.Text = CurrChar.getSecondaryProfession(CurrChar, "Pandaria", "Fishing").Rank
-            SetLabelColourByValue(lbFishingPanda, 75)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbFishingPanda, 75)
             lbCookingDraenor.Text = CurrChar.getSecondaryProfession(CurrChar, "Draenor", "Cooking").Rank
-            SetLabelColourByValue(lbCookingDraenor, 100)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbCookingDraenor, 100)
             lbFishingDraenor.Text = CurrChar.getSecondaryProfession(CurrChar, "Draenor", "Fishing").Rank
-            SetLabelColourByValue(lbFishingDraenor, 100)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbFishingDraenor, 100)
             lbCookingLegion.Text = CurrChar.getSecondaryProfession(CurrChar, "Legion", "Cooking").Rank
-            SetLabelColourByValue(lbCookingLegion, 100)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbCookingLegion, 100)
             lbFishingLegion.Text = CurrChar.getSecondaryProfession(CurrChar, "Legion", "Fishing").Rank
-            SetLabelColourByValue(lbFishingLegion, 100)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbFishingLegion, 100)
             lbCookingAzeroth.Text = CurrChar.getSecondaryProfession(CurrChar, "Kul Tiran", "Cooking").Rank
-            SetLabelColourByValue(lbCookingAzeroth, 150)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbCookingAzeroth, 150)
             lbFishingAzeroth.Text = CurrChar.getSecondaryProfession(CurrChar, "Kul Tiran", "Fishing").Rank
-            SetLabelColourByValue(lbFishingAzeroth, 150)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbFishingAzeroth, 150)
             lbArchaelogyVanilla.Text = CurrChar.getSecondaryProfession(CurrChar, "", "Archaeology").Rank
-            SetLabelColourByValue(lbArchaelogyVanilla, 950)
+            oSoapyData.SoapyConst.SetLabelColourByValue(lbArchaelogyVanilla, 950)
 
         Catch
         End Try
 
     End Sub
 
-    Private Sub SetLabelColour(ByRef oLblLabel As Label)
+    'Private functions
+    Private Sub NextChar()
+        Dim bNextFound As Boolean
 
-        oLblLabel.ForeColor = Color.Blue
+        Try
 
-    End Sub
+            While (Not bNextFound) And (CurrPos < oSoapyData.AttemptedCharCount)
 
-    Private Sub SetLabelColourByValue(ByRef oLblLabel As Label, iMaxValue As Integer)
+                CurrPos = CurrPos + 1
+                bNextFound = oCharFilter.MatchesFilter(oSoapyData.Chars(CurrPos))
 
-        Dim iSegments As Integer = iMaxValue / 25
-        Dim iLabelValue As Integer = oLblLabel.Text
+            End While
 
-        Select Case iLabelValue
-            Case 0
-                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourLevelZero
+            RefreshForm()
 
-            Case <= 10 * iSegments
-                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourLevelLow
+        Catch ex As Exception
 
-            Case <= 15 * iSegments
-                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourLevelMedium
-
-            Case < 25 * iSegments
-                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourLevelHigh
-
-            Case iMaxValue
-                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourLevelFull
-
-            Case Else
-                oLblLabel.ForeColor = Color.Black
-
-        End Select
-
-    End Sub
-
-    Private Sub SetLabelColourByClass(ByRef oLblLabel As Label, sClass As String)
-
-        Select Case sClass
-            Case "Death Knight"
-                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassDeathKnight
-            Case "Demon Hunter"
-                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassDemonHunter
-            Case "Druid"
-                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassDruid
-            Case "Hunter"
-                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassHunter
-            Case "Mage"
-                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassMage
-            Case "Monk"
-                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassMonk
-            Case "Paladin"
-                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassPaladin
-            Case "Priest"
-                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassPriest
-            Case "Rogue"
-                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassRogue
-            Case "Shaman"
-                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassShaman
-            Case "Warlock"
-                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassWarlock
-            Case "Warrior"
-                oLblLabel.ForeColor = oSoapyData.SoapyConst.ColourClassWarrior
-            Case Else
-                oLblLabel.ForeColor = Color.Black
-        End Select
-
+        End Try
     End Sub
 
     'Button functions
@@ -221,10 +179,7 @@
     End Sub
 
     Private Sub cmdNext_Click(sender As Object, e As EventArgs) Handles cmdNext.Click
-        If CurrPos < oSoapyData.CharCount Then
-            CurrPos = CurrPos + 1
-            RefreshForm()
-        End If
+        NextChar()
     End Sub
 
     Private Sub cmdPrevious_Click(sender As Object, e As EventArgs) Handles cmdPrevious.Click

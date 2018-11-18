@@ -38,6 +38,7 @@ Public Class SoapyIO
                 If GetCharData(SoapyData.Chars(iCharCount), TestData(iLoop, 1), TestData(iLoop, 2)) Then
                     GetCharNotes(SoapyData.Chars(iCharCount))
                     iCharCount = iCharCount + 1
+                    SoapyData.CharCount = iCharCount
                 End If
 
             End If
@@ -348,13 +349,13 @@ Public Class SoapyIO
         TestData(Count, 1) = "ryanhunter"
         TestData(Count, 2) = Light
         Count += 1
-        TestData(Count, 1) = "greyly"
-        TestData(Count, 2) = Light
-        Count += 1
         TestData(Count, 1) = "shroomhunter"
         TestData(Count, 2) = Light
         Count += 1
         TestData(Count, 1) = "beardsly"
+        TestData(Count, 2) = Light
+        Count += 1
+        TestData(Count, 1) = "greyly"
         TestData(Count, 2) = Light
         Count += 1
         TestData(Count, 1) = "ragmor"
@@ -386,6 +387,18 @@ Public Class SoapyIO
         Count += 1
         TestData(Count, 1) = "leaflet"
         TestData(Count, 2) = Light
+        Count += 1
+        TestData(Count, 1) = "treelygreen"
+        TestData(Count, 2) = Light
+        Count += 1
+        TestData(Count, 1) = "amberglow"
+        TestData(Count, 2) = Light
+        Count += 1
+        TestData(Count, 1) = "ragmer"
+        TestData(Count, 2) = Light
+        Count += 1
+        TestData(Count, 1) = "ryui"
+        TestData(Count, 2) = Light
 
         'Mazigros
         Count += 1
@@ -395,10 +408,10 @@ Public Class SoapyIO
         TestData(Count, 1) = "loneshot"
         TestData(Count, 2) = Mazigros
         Count += 1
-        TestData(Count, 1) = "superjock"
+        TestData(Count, 1) = "splifshot"
         TestData(Count, 2) = Mazigros
         Count += 1
-        TestData(Count, 1) = "splifshot"
+        TestData(Count, 1) = "superjock"
         TestData(Count, 2) = Mazigros
         Count += 1
         TestData(Count, 1) = "blackfrost"
@@ -407,19 +420,22 @@ Public Class SoapyIO
         TestData(Count, 1) = "greensly"
         TestData(Count, 2) = Mazigros
         Count += 1
-        TestData(Count, 1) = "greylocks"
-        TestData(Count, 2) = Mazigros
-        Count += 1
-        TestData(Count, 1) = "solidsaint"
+        TestData(Count, 1) = "foxyshot"
         TestData(Count, 2) = Mazigros
         Count += 1
         TestData(Count, 1) = "softleaf"
         TestData(Count, 2) = Mazigros
         Count += 1
-        TestData(Count, 1) = "foxyshot"
+        TestData(Count, 1) = "solidsaint"
+        TestData(Count, 2) = Mazigros
+        Count += 1
+        TestData(Count, 1) = "greylocks"
         TestData(Count, 2) = Mazigros
         Count += 1
         TestData(Count, 1) = "lunertic"
+        TestData(Count, 2) = Mazigros
+        Count += 1
+        TestData(Count, 1) = "didy"
         TestData(Count, 2) = Mazigros
 
         'Nagrand
@@ -427,10 +443,10 @@ Public Class SoapyIO
         TestData(Count, 1) = "leafygreens"
         TestData(Count, 2) = Nagrand
         Count += 1
-        TestData(Count, 1) = "longshot"
+        TestData(Count, 1) = "blazeshadow"
         TestData(Count, 2) = Nagrand
         Count += 1
-        TestData(Count, 1) = "blazeshadow"
+        TestData(Count, 1) = "longshot"
         TestData(Count, 2) = Nagrand
         Count += 1
         TestData(Count, 1) = "furryshot"
@@ -439,42 +455,39 @@ Public Class SoapyIO
         TestData(Count, 1) = "thehuntsmen"
         TestData(Count, 2) = Nagrand
         Count += 1
-        TestData(Count, 1) = "fireshot"
+        TestData(Count, 1) = "shadowhuntin"
         TestData(Count, 2) = Nagrand
         Count += 1
-        TestData(Count, 1) = "shadowhuntin"
+        TestData(Count, 1) = "fireshot"
         TestData(Count, 2) = Nagrand
         Count += 1
         TestData(Count, 1) = "stormywaters"
         TestData(Count, 2) = Nagrand
         Count += 1
-        TestData(Count, 1) = "blueshot"
+        TestData(Count, 1) = "fuzzyshot"
         TestData(Count, 2) = Nagrand
         Count += 1
-        TestData(Count, 1) = "fuzzyshot"
+        TestData(Count, 1) = "blueshot"
         TestData(Count, 2) = Nagrand
 
         'Kilrogg
         Count += 1
-        TestData(Count, 1) = "becky"
-        TestData(Count, 2) = Kilrogg
-        Count += 1
-        TestData(Count, 1) = "stilwaters"
-        TestData(Count, 2) = Kilrogg
-        Count += 1
-        TestData(Count, 1) = "cory"
+        TestData(Count, 1) = "leafshadow"
         TestData(Count, 2) = Kilrogg
         Count += 1
         TestData(Count, 1) = "heartshot"
         TestData(Count, 2) = Kilrogg
         Count += 1
-        TestData(Count, 1) = "leafshadow"
-        TestData(Count, 2) = Kilrogg
-        Count += 1
-        TestData(Count, 1) = "fuzzles"
-        TestData(Count, 2) = Kilrogg
-        Count += 1
         TestData(Count, 1) = "roughshot"
+        TestData(Count, 2) = Kilrogg
+        Count += 1
+        TestData(Count, 1) = "cory"
+        TestData(Count, 2) = Kilrogg
+        Count += 1
+        TestData(Count, 1) = "becky"
+        TestData(Count, 2) = Kilrogg
+        Count += 1
+        TestData(Count, 1) = "stilwaters"
         TestData(Count, 2) = Kilrogg
 
         'Runetotem
@@ -485,7 +498,17 @@ Public Class SoapyIO
         TestData(Count, 1) = "fuzzles"
         TestData(Count, 2) = Rune
 
-        SoapyData.CharCount = Count
+        'Bloodhoof
+        Count += 1
+        TestData(Count, 1) = "crustie"
+        TestData(Count, 2) = Blood
+
+        'Chamber of Aspects
+        Count += 1
+        TestData(Count, 1) = "shadowhuntin"
+        TestData(Count, 2) = Chamber
+
+        SoapyData.AttemptedCharCount = Count
 
     End Sub
 

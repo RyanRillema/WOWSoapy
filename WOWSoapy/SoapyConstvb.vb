@@ -43,22 +43,25 @@
         SetConst()
     End Sub
 
+    'Notes
     Public Function GetBagNotes(sName As String, sRealm As String) As String
         Dim sBagNotes As String
 
-        sBagNotes = ""
+        sBagNotes = "Not added"
 
         Select Case sRealm
             Case LightCased
                 Select Case sName
-                    Case ""
+                    Case "Zilidan", "Leaflet", "Treelygreen", "Amberglow", "Ragmer", "Ryui"
                         sBagNotes = ""
                     Case "Ryanhunter"
                         sBagNotes = "Pet items"
                     Case "Shroomhunter"
                         sBagNotes = "Excess Ore, Excess Stone, Anvils"
                     Case "Beardsly"
-                        sBagNotes = ""
+                        sBagNotes = "Draenor Fish"
+                    Case "Greyly"
+                        sBagNotes = "Add to guild"
                     Case "Ragmor"
                         sBagNotes = "Lockboxes, Grinding Stones, Draenor Gear"
                     Case "Moonlock"
@@ -69,21 +72,77 @@
                         sBagNotes = "Excess Herbs, Herb fractions"
                     Case "Momonk"
                         sBagNotes = "Enchanting items"
+                    Case "Shamrone"
+                        sBagNotes = "Draenor Inscription, Cards (Visions, War, Iron, Moon)"
+                    Case "Steelsaint"
+                        sBagNotes = "Herb fractions"
+                    Case "Valkorn"
+                        sBagNotes = "Auctioneer"
                 End Select
 
             Case MazigrosCased
                 Select Case sName
-                    Case ""
+                    Case "Superjock", "Greensly", "Foxyshot", "Softleaf", "Solidsaint", "Lunertic", "Didy"
                         sBagNotes = ""
+                    Case "Ryui"
+                        sBagNotes = "Azeroth Leather"
                     Case "Splifshot"
                         sBagNotes = "Inscription items"
                     Case "Loneshot"
                         sBagNotes = "Legion Herbs?"
+                    Case "Blackfrost"
+                        sBagNotes = "Hexweave bag mats"
+                    Case "Greylocks"
+                        sBagNotes = "Engineering mats"
+                End Select
+
+            Case NagrandCased
+                Select Case sName
+                    Case "Blazeshadow", "Stormywaters", "Fuzzyshot", "Blueshot"
+                        sBagNotes = ""
+                    Case "Leafygreens"
+                        sBagNotes = "Enchanting items, Tailoring items, Hexweave bag mats"
+                    Case "Longshot"
+                        sBagNotes = "Plant parts"
+                    Case "Furryshot"
+                        sBagNotes = "Extra bags"
+                    Case "Thehuntsmen"
+                        sBagNotes = "Lockboxes, Grinding stones, Panda seeds/food"
+                    Case "Shadowhuntin"
+                        sBagNotes = "Banker"
+                    Case "Fireshot"
+                        sBagNotes = "Cards, Inscrption Items"
+                    Case ""
+                        sBagNotes = "To do"
+                End Select
+
+            Case KilroggCased
+                Select Case sName
+                    Case "Leafshadow", "Heartshot", "Roughshot", "Cory", "Becky", "Stilwaters"
+                        sBagNotes = ""
+                End Select
+
+            Case RuneCased
+                Select Case sName
+                    Case "Fuzzles", "Loneshot"
+                        sBagNotes = ""
+                End Select
+
+            Case BloodCased
+                Select Case sName
+                    Case "Crustie"
+                        sBagNotes = "Only horde"
+                End Select
+
+            Case ChamberCased
+                Select Case sName
+                    Case "Shadowhintin"
+                        sBagNotes = "Can be removed, No guild, Stone, Ore bars, Engineering items"
                 End Select
 
         End Select
 
-        Return sBagNotes
+                Return sBagNotes
     End Function
 
     Public Function GetRealesNotes(Optional sVersion As String = "All") As String
@@ -95,14 +154,19 @@
                 sNotes = sNotes & "/n" & "Intital Release"
             Case "0.2.0", "All"
                 sNotes = sNotes & "/n" & "Add details form functionality. Added to Git source control"
+            Case "0.2.1", "All"
+                sNotes = sNotes & "/n" & "Updated bag notes"
         End Select
 
         Return sNotes
     End Function
 
+    'Version
     Public Function GetVersion() As String
         Return "Version: " & Version
     End Function
+
+    'Set const
     Private Sub SetConst()
         Headings(1) = "Name"
         Headings(2) = "Level"
@@ -127,6 +191,74 @@
         Headings(21) = "Fishing"
         Headings(22) = "Cooking"
         Headings(23) = "Archeology"
+    End Sub
+
+    'Colours
+    Public Sub SetLabelColour(ByRef oLblLabel As Label)
+
+        oLblLabel.ForeColor = Color.Blue
+
+    End Sub
+
+    Public Sub SetLabelColourByValue(ByRef oLblLabel As Label, iMaxValue As Integer)
+
+        Dim iSegments As Integer = iMaxValue / 25
+        Dim iLabelValue As Integer = oLblLabel.Text
+
+        Select Case iLabelValue
+            Case 0
+                oLblLabel.ForeColor = ColourLevelZero
+
+            Case <= 10 * iSegments
+                oLblLabel.ForeColor = ColourLevelLow
+
+            Case <= 15 * iSegments
+                oLblLabel.ForeColor = ColourLevelMedium
+
+            Case < 25 * iSegments
+                oLblLabel.ForeColor = ColourLevelHigh
+
+            Case iMaxValue
+                oLblLabel.ForeColor = ColourLevelFull
+
+            Case Else
+                oLblLabel.ForeColor = Color.Black
+
+        End Select
+
+    End Sub
+
+    Public Sub SetLabelColourByClass(ByRef oLblLabel As Label, sClass As String)
+
+        Select Case sClass
+            Case "Death Knight"
+                oLblLabel.ForeColor = ColourClassDeathKnight
+            Case "Demon Hunter"
+                oLblLabel.ForeColor = ColourClassDemonHunter
+            Case "Druid"
+                oLblLabel.ForeColor = ColourClassDruid
+            Case "Hunter"
+                oLblLabel.ForeColor = ColourClassHunter
+            Case "Mage"
+                oLblLabel.ForeColor = ColourClassMage
+            Case "Monk"
+                oLblLabel.ForeColor = ColourClassMonk
+            Case "Paladin"
+                oLblLabel.ForeColor = ColourClassPaladin
+            Case "Priest"
+                oLblLabel.ForeColor = ColourClassPriest
+            Case "Rogue"
+                oLblLabel.ForeColor = ColourClassRogue
+            Case "Shaman"
+                oLblLabel.ForeColor = ColourClassShaman
+            Case "Warlock"
+                oLblLabel.ForeColor = ColourClassWarlock
+            Case "Warrior"
+                oLblLabel.ForeColor = ColourClassWarrior
+            Case Else
+                oLblLabel.ForeColor = Color.Black
+        End Select
+
     End Sub
 
 End Class
