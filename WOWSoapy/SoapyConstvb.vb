@@ -91,7 +91,7 @@
                     Case "Loneshot"
                         sBagNotes = "Legion Herbs?"
                     Case "Blackfrost"
-                        sBagNotes = "Hexweave bag mats"
+                        sBagNotes = "Hexweave bag mats, Panda Ingredients"
                     Case "Greylocks"
                         sBagNotes = "Engineering mats"
                 End Select
@@ -126,12 +126,6 @@
                 Select Case sName
                     Case "Fuzzles", "Loneshot"
                         sBagNotes = ""
-                End Select
-
-            Case BloodCased
-                Select Case sName
-                    Case "Crustie"
-                        sBagNotes = "Only horde"
                 End Select
 
             Case ChamberCased

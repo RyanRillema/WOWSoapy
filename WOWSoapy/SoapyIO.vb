@@ -394,10 +394,7 @@ Public Class SoapyIO
         TestData(Count, 1) = "amberglow"
         TestData(Count, 2) = Light
         Count += 1
-        TestData(Count, 1) = "ragmer"
-        TestData(Count, 2) = Light
-        Count += 1
-        TestData(Count, 1) = "ryui"
+        TestData(Count, 1) = "draenor"
         TestData(Count, 2) = Light
 
         'Mazigros
@@ -436,6 +433,15 @@ Public Class SoapyIO
         TestData(Count, 2) = Mazigros
         Count += 1
         TestData(Count, 1) = "didy"
+        TestData(Count, 2) = Mazigros
+        Count += 1
+        TestData(Count, 1) = "alucard"
+        TestData(Count, 2) = Mazigros
+        Count += 1
+        TestData(Count, 1) = "dabz"
+        TestData(Count, 2) = Mazigros
+        Count += 1
+        TestData(Count, 1) = "leviathon"
         TestData(Count, 2) = Mazigros
 
         'Nagrand
@@ -497,11 +503,6 @@ Public Class SoapyIO
         Count += 1
         TestData(Count, 1) = "fuzzles"
         TestData(Count, 2) = Rune
-
-        'Bloodhoof
-        Count += 1
-        TestData(Count, 1) = "crustie"
-        TestData(Count, 2) = Blood
 
         'Chamber of Aspects
         Count += 1
