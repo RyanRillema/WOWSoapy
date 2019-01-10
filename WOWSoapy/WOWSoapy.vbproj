@@ -85,6 +85,12 @@
     <Compile Include="Details.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FilterForm.Designer.vb">
+      <DependentUpon>FilterForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FilterForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -121,6 +127,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Details.resx">
       <DependentUpon>Details.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterForm.resx">
+      <DependentUpon>FilterForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

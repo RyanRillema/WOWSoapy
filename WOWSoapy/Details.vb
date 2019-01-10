@@ -11,9 +11,12 @@
 
         ' Add any initialization after the InitializeComponent() call.
         oSoapyData = oSetSoapyData
-        oCharFilter = New CharFilter
+        oCharFilter = New CharFilter(oSoapyData)
 
-        oCharFilter.iMinLevel = 101
+        'oCharFilter.iMinLevel = 101
+        oCharFilter.sClass = "Hunter"
+        'oCharFilter.sRealmA = oSoapyData.SoapyConst.LightCased
+        'oCharFilter.sRealmB = oSoapyData.SoapyConst.MazigrosCased
 
     End Sub
 
@@ -173,6 +176,25 @@
         End Try
     End Sub
 
+    Private Sub PrevChar()
+        Dim bPrevFound As Boolean
+
+        Try
+
+            While (Not bPrevFound) And (CurrPos > 1)
+
+                CurrPos = CurrPos - 1
+                bPrevFound = oCharFilter.MatchesFilter(oSoapyData.Chars(CurrPos))
+
+            End While
+
+            RefreshForm()
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
     'Button functions
     Private Sub cmdClose_Click(sender As Object, e As EventArgs) Handles cmdClose.Click
         HideForm()
@@ -183,10 +205,7 @@
     End Sub
 
     Private Sub cmdPrevious_Click(sender As Object, e As EventArgs) Handles cmdPrevious.Click
-        If CurrPos > 1 Then
-            CurrPos = CurrPos - 1
-            RefreshForm()
-        End If
+        PrevChar()
     End Sub
 
 End Class
