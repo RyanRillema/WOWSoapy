@@ -33,3 +33,4 @@ C:\Users\rillemar\Source\Repos\WOWSoapy\WOWSoapy\obj\Debug\WOWSoapy.exe
 C:\Users\rillemar\Source\Repos\WOWSoapy\WOWSoapy\obj\Debug\WOWSoapy.xml
 C:\Users\rillemar\Source\Repos\WOWSoapy\WOWSoapy\obj\Debug\WOWSoapy.pdb
 C:\Users\ryanr\source\repos\WOWSoapy\WOWSoapy\obj\Debug\WOWSoapy.FilterForm.resources
+C:\Users\rillemar\source\repos\WOWSoapy\WOWSoapy\obj\Debug\WOWSoapy.FilterForm.resources
