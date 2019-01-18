@@ -60,7 +60,7 @@ Public Class SoapyIO
 
         Try
 
-            request = WebRequest.Create("https://eu.api.blizzard.com/wow/character/" & Realm & "/" & Name & "?fields=professions&locale=en_EU&access_token=USTvvwNMeAx2nL3Q74PhP9368XUvUNSrjR")
+            request = WebRequest.Create("https://eu.api.blizzard.com/wow/character/" & Realm & "/" & Name & "?fields=professions&locale=en_EU&access_token=" & SoapyData.SoapyAuth.getSecret)
 
             ' If required by the server, set the credentials.
             request.Credentials = CredentialCache.DefaultCredentials
@@ -102,7 +102,7 @@ Public Class SoapyIO
         Dim responseFromServer As String
 
         Try
-            request = WebRequest.Create("https://eu.api.blizzard.com/wow/data/character/races?locale=en_EU&access_token=USTvvwNMeAx2nL3Q74PhP9368XUvUNSrjR")
+            request = WebRequest.Create("https://eu.api.blizzard.com/wow/data/character/races?locale=en_EU&access_token=" & SoapyData.SoapyAuth.getSecret)
             'request = WebRequest.Create("https://us.api.battle.com/wow/data/character/races?locale=en_US&access_token=USTvvwNMeAx2nL3Q74PhP9368XUvUNSrjR")
 
             ' If required by the server, set the credentials.
@@ -132,7 +132,7 @@ Public Class SoapyIO
         Dim responseFromServer As String
 
         Try
-            request = WebRequest.Create("https://eu.api.blizzard.com/wow/data/character/classes?locale=en_EU&access_token=USTvvwNMeAx2nL3Q74PhP9368XUvUNSrjR")
+            request = WebRequest.Create("https://eu.api.blizzard.com/wow/data/character/classes?locale=en_EU&access_token=" & SoapyData.SoapyAuth.getSecret)
             'request = WebRequest.Create("https://us.api.battle.net/wow/data/character/classes?locale=en_US&apikey=yx3b77qkavurjuvyjyyeyvr6t9hhpr9m")
 
             ' If required by the server, set the credentials.

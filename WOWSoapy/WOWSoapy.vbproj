@@ -113,6 +113,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RaceDetails.vb" />
+    <Compile Include="SoapyAuth.vb" />
     <Compile Include="SoapyConstvb.vb" />
     <Compile Include="SoapyData.vb" />
     <Compile Include="SoapyIO.vb" />

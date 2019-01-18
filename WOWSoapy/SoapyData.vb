@@ -12,6 +12,7 @@
     Public Chars(50) As CharDetails
     Public Races As Races
     Public Classes As Classes
+    Public SoapyAuth As SoapyAuth
 
     Public Sub New(SetFrmWowSoapy As WOWSoapy)
         FrmWowSoapy = SetFrmWowSoapy
@@ -21,6 +22,7 @@
         SoapyIO = New SoapyIO(Me)
         SoapyConst = New SoapyConst
         TrdWowSoapy = New TrdWowSoapy(Me)
+        SoapyAuth = New SoapyAuth(Me)
     End Sub
 
     Public Sub SortCharArrayByLevel()
